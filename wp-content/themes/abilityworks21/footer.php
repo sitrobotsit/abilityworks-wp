@@ -18,7 +18,7 @@
               <?php endforeach; ?>
             </div>
           </div>
-          <div class="logos-carousel-arrows sitrobot-test-deploy-2"></div>
+          <div class="logos-carousel-arrows sitrobot-test-deploy-3"></div>
         </div>
       </div>
     </section>
