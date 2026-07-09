@@ -1,48 +1,19 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+### Track ONLY the custom theme: `wp-content/themes/abilityworks21/`
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# Ignore everything by default.
+/*
 
-# Configuration
-wp-config.php
+# But keep this file tracked.
+!/.gitignore
 
-# Example themes
-/wp-content/themes/twenty*/
+# Allow traversing into the theme path.
+!/wp-content/
+!/wp-content/themes/
+!/wp-content/themes/abilityworks21/
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Track all theme files.
+!/wp-content/themes/abilityworks21/**
 
-# Uploads
-/wp-content/uploads/
-
-# Log files
-*.log
-
-# htaccess
-/.htaccess
-
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# OS cruft (kept here for clarity; already ignored by /* above).
+.DS_Store
+wp-content/.DS_Store
