@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - export SITEPATH=/home1/abilityw/test.abilityworks.com.au
+    - /bin/mkdir -p "$SITEPATH/wp-content/themes" "$SITEPATH/wp-content/plugins"
+    - /bin/cp -R wp-content/themes/abilityworks21 "$SITEPATH/wp-content/themes/"

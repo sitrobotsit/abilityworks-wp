@@ -5,6 +5,7 @@
 
 # But keep this file tracked.
 !/.gitignore
+!/.cpanel.yml
 
 # Allow traversing into the theme path.
 !/wp-content/
