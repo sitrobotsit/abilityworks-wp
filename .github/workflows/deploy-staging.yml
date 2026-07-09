@@ -23,7 +23,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          WEBDAV_URL="https://${WEBDISK_HOST}:2078/webdisk/"
+          WEBDAV_URL="https://${WEBDISK_HOST}:2078/"
 
           # IMPORTANT:
           # If your Web Disk account is rooted at test.abilityworks.com.au/wp-content/,
