@@ -1,0 +1,51 @@
+name: Deploy to staging (Web Disk)
+
+on:
+  push:
+    branches: [staging]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install cadaver (WebDAV client)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cadaver
+
+      - name: Upload wp-content pieces via WebDAV
+        env:
+          WEBDISK_HOST: ${{ secrets.WEBDISK_HOST }}
+          WEBDISK_USERNAME: ${{ secrets.WEBDISK_USERNAME }}
+          WEBDISK_PASSWORD: ${{ secrets.WEBDISK_PASSWORD }}
+        run: |
+          set -euo pipefail
+
+          WEBDAV_URL="https://${WEBDISK_HOST}:2078/"
+
+          # IMPORTANT:
+          # If your Web Disk account is rooted at test.abilityworks.com.au/wp-content/,
+          # then set REMOTE_BASE="".
+          # If it is rooted at test.abilityworks.com.au/,
+          # then set REMOTE_BASE="wp-content".
+          REMOTE_BASE="wp-content"
+
+          cat > cadaver.cmd <<'EOF'
+          EOF
+
+          # Create directories + upload theme
+          printf '%s\n' "open ${WEBDAV_URL}" \
+            "user ${WEBDISK_USERNAME} ${WEBDISK_PASSWORD}" \
+            "mkdir ${REMOTE_BASE}/themes" \
+            "mkdir ${REMOTE_BASE}/themes/abilityworks21" \
+            "cd ${REMOTE_BASE}/themes/abilityworks21" \
+            "mput -r ./wp-content/themes/abilityworks21/*" \
+            "cd /" \
+            "mkdir ${REMOTE_BASE}/plugins" \
+            "cd ${REMOTE_BASE}/plugins" \
+            "mput -r ./wp-content/plugins/*" \
+            "quit" > cadaver.cmd
+
+          cadaver < cadaver.cmd
