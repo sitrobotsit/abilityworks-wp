@@ -1,0 +1,111 @@
+.st-highlighted-story {
+  padding: 0;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 80px;
+  }
+  .inn {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      margin: 0 auto;
+      max-width: ContainerMaxWidth('lg');
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: ContainerMaxWidth('xl');
+    }
+  }
+  .story-details {
+    padding: 0 24px 24px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+      width: 35.47%;
+      text-align: unset;
+    }
+    h4.subtitle {
+      font-size: 14px;
+      letter-spacing: .8px;
+      color: $gray-600;
+      margin: 0 0 10px;
+    }
+    h3.post-title {
+      font-size: 20px;
+      font-weight: $font-weight-bold;
+      line-height: 1.25;
+      margin: 0 0 15px;
+      color: $primary;
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+        line-height: 1.167;
+        margin-bottom: 18px;
+      }
+    }
+    .desc {
+      margin-bottom: 20px;
+    }
+    .cats {
+      list-style-type: none;
+      margin: 0 -4px 15px;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      @include media-breakpoint-up(lg) {
+        justify-content: flex-start;
+        margin-bottom: 30px;
+      }
+      li {
+        padding: 0 4px;
+        margin-bottom: 9px;
+        span {
+          display: inline-block;
+          font-size: 12px;
+          line-height: 1.3;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: $gray-500;
+          border: 1px solid;
+          border-radius: 3px;
+          padding: 3px 6px;
+        }
+      }
+    }
+    .more {
+      display: inline-block;
+      border: 1px solid $primary;
+      color: $primary;
+      border-radius: 22px;
+      padding: 11px 45px 11px 16px;
+      line-height: 19px;
+      position: relative;
+      text-decoration: none;
+      transition: all .3s ease;
+      &:after {
+        font-family: icomoon;
+        content: "\e90f";
+        font-size: 8px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:hover {
+        background: $primary;
+        color: $white;
+      }
+    }
+  }
+  .heroimg {
+    @include media-breakpoint-up(lg) {
+      width: 57.094%;
+    }
+    a {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

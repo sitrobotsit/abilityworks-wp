@@ -1,0 +1,28 @@
+.st-accordion {
+  padding: 50px 0;
+  @include media-breakpoint-up(md) {
+    padding: 80px 0 100px;
+  }
+  .st-title {
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  }
+  .desc {
+    margin-bottom: 30px;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+    }
+  }
+  .accordion-wrapper {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+      .left-col, .right-col {
+        width: calc(50% - 15px);
+      }
+    }
+  }
+}

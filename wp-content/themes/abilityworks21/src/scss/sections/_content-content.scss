@@ -1,0 +1,20 @@
+.st-content-content {
+  .inn {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+    .ct {
+      text-align: center;
+      margin-bottom: 50px;
+      @include media-breakpoint-up(md) {
+        width: calc(50% - 16px);
+        text-align: unset;
+        margin-bottom: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

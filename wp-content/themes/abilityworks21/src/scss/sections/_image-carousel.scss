@@ -1,0 +1,188 @@
+.st-image-carousel {
+  position: relative;
+  z-index: 10;
+  .card-img-crs {
+    background: $white;
+    border-radius: 18px;
+    box-shadow: 4px 4px 15px 0 rgba($black, .2);
+    overflow: hidden;
+    margin: 0 10px;
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  .img {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+      background-repeat: no-repeat;
+      background-color: $gray-300;
+      background-position: center;
+      background-size: cover;
+      height: 300px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: auto;
+      width: 50%;
+    }
+  }
+  .img-mob {
+    background-repeat: no-repeat;
+    background-color: $gray-300;
+    background-position: center;
+    background-size: cover;
+    height: 207px;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .ct-wrapper {
+    padding: 24px 24px 30px;
+    @include media-breakpoint-up(md) {
+      padding: 40px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
+    .subtitle {
+      font-size: 16px;
+      letter-spacing: .9px;
+      text-align: center;
+      margin: 0 0 15px;
+      @include media-breakpoint-up(md) {
+        text-align: unset;
+      }
+      .st1 {
+        display: block;
+        color: $primary;
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+          margin-right: 15px;
+        }
+      }
+      .st2 {
+        display: block;
+        color: $blue;
+        @include media-breakpoint-up(md) {
+          display: inline-block;
+        }
+      }
+    }
+    .title {
+      font-size: 20px;
+      font-weight: $font-weight-bold;
+      line-height: 1.25;
+      text-align: center;
+      margin-bottom: 10px;
+      @include media-breakpoint-up(md) {
+        font-size: 30px;
+        line-height: 1.167;
+        text-align: unset;
+      }
+    }
+  }
+  .items-carousel {
+    .slick-list {
+      .slick-track {
+        .slick-slide {
+          outline: none;
+        }
+      }
+    }
+    .desc {
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        text-align: unset;
+      }
+      .info-text {
+        display: none;
+      }
+    }
+  }
+  .foot {
+    padding-top: 30px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .btn {
+      display: inline-block;
+      border: 1px solid;
+      border-radius: 22px;
+      padding: 11px 45px 11px 16px;
+      color: $blue;
+      font-weight: $font-weight-bold;
+      line-height: 19px;
+      position: relative;
+      &:hover {
+        background: $blue;
+        color: $white;
+        border-color: $blue;
+      }
+      &:after {
+        font-family: icomoon;
+        content: "\e90f";
+        font-size: 8px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .carousel-navs {
+      padding-top: 30px;
+      @include media-breakpoint-up(md) {
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+      }
+      .arrows-container {
+        margin-bottom: 15px;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+        }
+        button {
+          border: 1px solid $primary;
+          color: $primary;
+          background: transparent;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          padding: 0;
+          margin: 0 5px;
+          transition: all .3s ease;
+          outline: none;
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .arrows-info {
+        font-size: 12px;
+        letter-spacing: .67px;
+        color: $primary;
+        @include media-breakpoint-up(md) {
+          text-align: right;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}

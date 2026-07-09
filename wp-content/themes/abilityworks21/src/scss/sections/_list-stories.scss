@@ -1,0 +1,124 @@
+.st-list-stories {
+  background: $white;
+  padding: 50px 0;
+  @include media-breakpoint-up(md) {
+    padding: 60px 0 65px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding: 68px 0 80px;
+  }
+  .filters {
+    margin-bottom: 40px;
+    .filter {
+      @include media-breakpoint-up(md) {
+        width: 355px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 442px;
+      }
+      .lb {
+        font-size: 14px;
+        line-height: 1;
+        letter-spacing: .8px;
+        margin: 0 0 12px;
+        padding-left: 16px;
+        color: $gray-600;
+        @include media-breakpoint-up(md) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .multi-select-container {
+    .multi-select-menu {
+      background: $white;
+    }
+  }
+  .stories-carousel {
+    width: 288px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      margin: 0;
+      .item {
+        padding-right: 30px;
+      }
+    }
+    .slick-list {
+      overflow: visible;
+      .slick-track {
+        .slick-slide {
+          outline: none;
+        }
+      }
+    }
+  }
+  .stories-carousel-btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 268px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+    .stories-carousel-dots {
+      .slick-dots {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin-left: -3px;
+        margin-right: -3px;
+        li {
+          line-height: 10px;
+          padding: 0 3px;
+          &.slick-active {
+            button {
+              background: $blue;
+            }
+          }
+          &:only-child {
+            display: none;
+          }
+          button {
+            border: 1px solid $blue;
+            background: transparent;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding: 0;
+            text-indent: -9999px;
+            outline: none;
+            transition: all .3s ease;
+          }
+        }
+      }
+    }
+    .stories-carousel-navs {
+      button {
+        border: 1px solid $blue;
+        color: $blue;
+        background: transparent;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0 5px;
+        transition: all .3s ease;
+        outline: none;
+        &:hover {
+          background: $blue;
+          color: $white;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

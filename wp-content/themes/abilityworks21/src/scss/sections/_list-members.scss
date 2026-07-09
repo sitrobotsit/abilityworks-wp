@@ -1,0 +1,123 @@
+.st-list-members {
+  .st-title {
+    font-size: 32px;
+    line-height: 1.1875;
+    text-align: center;
+    margin: 0 0 30px;
+    @include media-breakpoint-up(md) {
+      font-size: 40px;
+      line-height: 1.2;
+      text-align: left;
+      margin: 0 0 25px;
+    }
+  }
+  .desc {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    @include media-breakpoint-up(md) {
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  }
+  .members {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20.5px;
+      margin-right: -20.5px;
+    }
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -19.5px;
+      margin-right: -19.5px;
+    }
+    li {
+      margin: 0 0 40px;
+      @include media-breakpoint-up(md) {
+        width: 33.3333%;
+        padding: 0 20.5px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 25%;
+        padding: 0 19.5px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 20%;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 40px;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 50px;
+        }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 60px;
+        }
+      }
+      .thumb {
+        text-align: center;
+        margin: 0 auto 25px;
+        max-width: 203px;
+        @include media-breakpoint-up(md) {
+          margin: 0 0 25px;
+        }
+        img {
+          width: 100%;
+          height: auto !important;
+          border-radius: 50%;
+        }
+        .ph-img {
+          width: 203px;
+          height: 203px;
+          margin: 0 auto;
+          border-radius: 50%;
+          background: $off-white;
+        }
+      }
+      h4 {
+        font-size: 22px;
+        line-height: 1.1875;
+        margin: 0 0 10px;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+          text-align: left;
+        }
+      }
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+          text-align: left;
+        }
+      }
+      .role {
+        text-align: center;
+        padding: 0 20px;
+        margin-bottom: 19px;
+        @include media-breakpoint-up(md) {
+          text-align: left;
+          padding: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      .btn-more {
+        margin: 0 auto;
+        display: block;
+        width: 128px;
+        @include media-breakpoint-up(md) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

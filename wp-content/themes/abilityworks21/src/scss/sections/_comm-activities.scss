@@ -1,0 +1,77 @@
+.st-comm-activities {
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  padding-top: 30px;
+  padding-bottom: 1px;
+  @include media-breakpoint-up(md) {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  .inn {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+    .comm-activity {
+      text-align: center;
+      margin: 0 0 50px;
+      @include media-breakpoint-up(md) {
+        width: 50%;
+        padding: 0 16px;
+        text-align: left;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 33.3333%;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 25%;
+      }
+      .thumb {
+        display: block;
+        margin-bottom: 20px;
+        &:hover {
+          img {
+            transform: scale(1.1194);
+          }
+        }
+        img {
+          width: 100%;
+          border-radius: 18px;
+          transition: all .3s ease;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        font-weight: $font-weight-bold;
+        line-height: 1.12;
+        margin-bottom: 15px;
+        a {
+          position: relative;
+          text-decoration: none;
+          &:hover {
+            color: $primary;
+            &:after {
+              display: block;
+            }
+          }
+          &:after {
+            content: "";
+            display: none;
+            position: absolute;
+            left: 0;
+            bottom: 4px;
+            width: 100%;
+            border-top: 1px solid;
+          }
+        }
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

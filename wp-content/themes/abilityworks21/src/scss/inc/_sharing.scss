@@ -1,0 +1,57 @@
+.sharing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .lb {
+    font-size: 13px;
+    margin-right: 15px;
+    letter-spacing: 1px;
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+      margin-right: 18px;
+    }
+  }
+  .addtoany_shortcode {
+    .a2a_kit {
+      display: flex;
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        @include media-breakpoint-up(md) {
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        &:hover {
+          opacity: .8;
+        }
+        &.a2a_button_facebook {
+          &:before {
+            content: "\e90b";
+          }
+        }
+        &.a2a_button_twitter {
+          &:before {
+            content: "\e901";
+          }
+        }
+        &.a2a_button_email {
+          &:before {
+            content: "\e918";
+          }
+        }
+        &:before {
+          font-family: 'icomoon';
+          font-size: 20px;
+          @include media-breakpoint-up(md) {
+            font-size: 22px;
+          }
+        }
+        .a2a_svg {
+          display: none;
+        }
+      }
+    }
+  }
+}

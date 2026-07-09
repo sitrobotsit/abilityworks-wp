@@ -1,0 +1,40 @@
+.post-meta {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 1.67px;
+  margin-bottom: 15px;
+}
+.post-sharing {
+  padding: 20px 15px 40px;
+  @include media-breakpoint-up(lg) {
+    padding: 25px 0 0;
+    float: right;
+    display: flex;
+    align-items: center;
+  }
+  .sharing_header {
+    text-align: center;
+    font-weight: $font-weight-bold;
+    margin: 0 0 20px;
+    @include media-breakpoint-up(lg) {
+      margin: 0 15px 0 0;
+    }
+  }
+  .addtoany_shortcode {
+    .addtoany_list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      a {
+        display: block;
+        margin: 0 7px;
+        padding: 0;
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}

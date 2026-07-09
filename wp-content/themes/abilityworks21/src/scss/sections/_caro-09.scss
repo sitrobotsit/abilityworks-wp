@@ -1,0 +1,102 @@
+.st-caro-09 {
+  .wrap {
+    @include media-breakpoint-up(lg) {
+      max-width: $container-lg;
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: $container-xl;
+    }
+  }
+  .slides-wrapper {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      width: 62.4%;
+    }
+  }
+  .slide {
+    img {
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        border-radius: $border-radius;
+      }
+    }
+  }
+  .slides-nav {
+    padding: 25px 0 0 245px;
+    button {
+      background: transparent;
+      padding: 0;
+      border: 0 none;
+      font-size: 34px;
+      color: $soft-blue;
+      cursor: pointer;
+      transition: all .3s ease;
+      margin: 0 5px;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .intro {
+    transition: all .3s ease;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      z-index: 2;
+      width: calc(37.6% + 230px);
+      padding-top: 35px;
+    }
+    .title {
+      display: flex;
+      margin: 0 0 33px;
+      span {
+        display: inline-block;
+        background: $primary;
+        color: $white;
+        border-radius: $border-radius;
+        padding: 24px 27px;
+      }
+    }
+    .titlebar {
+      margin-bottom: 0;
+      position: relative;
+      width: 100%;
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+    .desc {
+      background: $ice-blue;
+      padding: 30px 10%;
+      text-align: center;
+      @include media-breakpoint-up(lg) {
+        padding: 45px 42px;
+        border-radius: $border-radius;
+        text-align: unset;
+      }
+      &.with-icon {
+        @include media-breakpoint-up(lg) {
+          display: flex;
+          .format {
+            flex: 1;
+          }
+        }
+      }
+      .ico {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(lg) {
+          margin: 0 37px 0 0;
+          width: 115px;
+        }
+        img {
+          max-width: 100%;
+          height: auto !important;
+        }
+      }
+    }
+  }
+}

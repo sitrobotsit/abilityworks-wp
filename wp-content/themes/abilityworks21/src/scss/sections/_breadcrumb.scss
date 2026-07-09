@@ -1,0 +1,41 @@
+.st-breadcrumb {
+  display: none;
+  color: $black;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
+  &.light {
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+  &.restricted-width {
+    .breadcrumb-wrapper {
+      @include media-breakpoint-up(lg) {
+        width: 36%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  a {
+    color: $black;
+  }
+  .inn {
+    position: relative;
+    .breadcrumb-wrapper {
+      position: absolute;
+      left: 0;
+      font-size: 12px;
+      z-index: 100;
+      .sep {
+        margin: 0 10px;
+      }
+      .current-item {
+        text-decoration: underline;
+      }
+    }
+  }
+}

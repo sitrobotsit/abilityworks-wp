@@ -1,0 +1,29 @@
+/*
+Theme Name: Ability Works 2021
+Description: 2021 wordpress theme for Ability Works website
+Author: Paoli Smith
+Author URI: https://paolismith.com.au/
+Version: 1.0
+Text Domain: aw
+*/
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  right: 100%;
+  padding: 5px;
+  padding: 0.5rem;
+  font-size: 20px;
+  font-size: 2rem;
+  color: #000;
+  background: #FFF;
+}
+
+.admin-bar .skip-link {
+  top: 32px;
+}
+
+.skip-link:focus {
+  right: auto;
+}

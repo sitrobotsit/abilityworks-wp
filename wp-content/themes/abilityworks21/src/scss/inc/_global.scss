@@ -1,0 +1,139 @@
+html, body {
+  overflow-x: hidden;
+}
+a {
+  &:hover {
+    color: inherit;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+p {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h6 {
+  font-family: $font-family-fsme-bold;
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+#main {
+  @include media-breakpoint-up(xl) {
+    padding-top: 150px;
+  }
+}
+.ca-spacer {
+  transition: all .3s ease;
+}
+.btn-outline-dark {
+  letter-spacing: 1px;
+  &:hover {
+    background-color: $blue !important;
+    border-color: $blue !important;
+    color: $white !important;
+  }
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  a {
+    text-decoration: none;
+    border: 1px solid $gray-800;
+    color: $gray-800;
+    display: inline-block;
+    padding: 7px 13px;
+    letter-spacing: 1.5px;
+    border-radius: $border-radius;
+    text-transform: uppercase;
+    line-height: 19px;
+    transition: all .3s ease;
+    &:hover {
+      background: $gray-800;
+      color: $white;
+    }
+  }
+  .sep {
+    margin: 0 5px;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.has-play-icon {
+  position: relative;
+  &:hover {
+    &:before {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    width: 76px;
+    height: 76px;
+    transform: translate(-50%, -50%);
+    background-color: inherit;
+    transition: all .3s ease;
+    @include media-breakpoint-up(md) {
+      width: 95px;
+      height: 95px;
+    }
+  }
+  &:after {
+    font-family: icomoon;
+    content: "\e917";
+    font-size: 28px;
+    line-height: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(calc(-50% + 3px), -50%);
+    color: $white;
+    @include media-breakpoint-up(md) {
+      font-size: 32px;
+    }
+  }
+}
+
+.image-video-play {
+  display: inline-block;
+}
+
+.st-title {
+  font-family: $font-family-fsme-bold;
+  font-size: 32px;
+  line-height: 1.2;
+  @include media-breakpoint-up(md) {
+    font-size: 41px;
+    line-height: 1.15;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 50px;
+    line-height: 1.1;
+  }
+}

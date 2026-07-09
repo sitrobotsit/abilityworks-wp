@@ -1,0 +1,131 @@
+.st-multimedia-carousel {
+  background: $white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+  .media-items {
+    width: 288px;
+    margin: 0 auto;
+    @include media-breakpoint-up(md) {
+      width: auto;
+      margin: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: -30px;
+    }
+    .slick-list {
+      overflow: visible;
+      .slick-track {
+        .slick-slide {
+          outline: none;
+          @include media-breakpoint-up(md) {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+    .item {
+      width: 268px;
+      height: 165px;
+      margin: 0 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 4px 4px 15px 0 rgba($black, .2);
+      @include media-breakpoint-up(md) {
+        width: 368px;
+        height: 284px;
+      }
+      @include media-breakpoint-up(lg) {
+        box-shadow: none;
+      }
+      .img {
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .embed-responsive {
+        height: 100%;
+      }
+    }
+  }
+  .items-carousel-btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 268px;
+    margin: 0 auto;
+    padding-top: 30px;
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 40px;
+    }
+    .items-carousel-dots {
+      .slick-dots {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin-left: -3px;
+        margin-right: -3px;
+        li {
+          line-height: 10px;
+          padding: 0 3px;
+          &.slick-active {
+            button {
+              background: $primary;
+            }
+          }
+          &:only-child {
+            display: none;
+          }
+          button {
+            border: 1px solid $primary;
+            background: transparent;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            padding: 0;
+            text-indent: -9999px;
+            outline: none;
+            transition: all .3s ease;
+          }
+        }
+      }
+    }
+    .items-carousel-navs {
+      button {
+        border: 1px solid $primary;
+        color: $primary;
+        background: transparent;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0 5px;
+        transition: all .3s ease;
+        outline: none;
+        &:hover {
+          background: $primary;
+          color: $white;
+        }
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+$intro-box-margin-right: 215px;
+.st-caro-13 {
+  .wrap {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .intro {
+    margin: 0 0 30px;
+    @include media-breakpoint-up(lg) {
+      width: calc(50% - #{$intro-box-margin-right});
+      margin-bottom: 0;
+    }
+    .title {
+      @include media-breakpoint-up(lg) {
+        display: flex;
+      }
+      .bar {
+        background: $primary;
+        @include media-breakpoint-up(lg) {
+          flex: 1;
+        }
+      }
+      .titlebar {
+        font-size: 20px;
+        line-height: 1.1;
+        margin: 0;
+        padding: 18px;
+        @include media-breakpoint-up(md) {
+          font-size: 25px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 30px;
+          text-align: left;
+          padding: 19px 0;
+          width: $container-lg / 2 - $intro-box-margin-right;
+        }
+        @include media-breakpoint-up(xl) {
+          width: $container-xl / 2 - $intro-box-margin-right;
+        }
+        &.with-bg {
+          &:after {
+            background: currentColor;
+          }
+        }
+      }
+    }
+    .desc {
+      background-color: $ice-blue;
+      @include media-breakpoint-up(lg) {
+        border-radius: 0 0 $border-radius 0;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .inn {
+        padding: 30px 35px;
+        @include media-breakpoint-up(lg) {
+          width: $container-lg / 2 - $intro-box-margin-right;
+          padding: 30px 35px 30px 0;
+        }
+        @include media-breakpoint-up(xl) {
+          width: $container-xl / 2 - $intro-box-margin-right;
+          padding: 35px 45px 40px 0;
+        }
+        .format {
+          text-align: center;
+          @include media-breakpoint-up(md) {
+            max-width: 65%;
+            margin: 0 auto;
+          }
+          @include media-breakpoint-up(lg) {
+            max-width: none;
+            text-align: unset;
+          }
+        }
+      }
+    }
+  }
+  .slides-wrapper {
+    @include media-breakpoint-up(lg) {
+      width: calc(50% + #{$intro-box-margin-right} - 30px);
+    }
+    .slides {
+      width: 200px;
+      margin: 0 auto;
+      @include media-breakpoint-up(md) {
+        width: $container-md + 24px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+        width: 100%;
+      }
+      .slick-list {
+        overflow: visible;
+        @include media-breakpoint-up(lg) {
+          overflow: hidden;
+          height: 100%;
+        }
+        .slick-track {
+          display: flex;
+          align-items: stretch;
+          @include media-breakpoint-up(lg) {
+            height: 100%;
+          }
+        }
+      }
+      .slide {
+        padding: 0 8px;
+        height: auto;
+        @include media-breakpoint-up(md) {
+          padding: 0 12px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding: 0 24px 0 0;
+        }
+      }
+    }
+    .item {
+      background: $off-white;
+      border-radius: $border-radius;
+      padding: 30px 17px 25px;
+      height: 100%;
+      @include media-breakpoint-up(md) {
+        padding: 35px 30px 30px;
+        width: 267px;
+      }
+      .icon {
+        position: relative;
+        height: 80px;
+        margin: 0 0 24px;
+        @include media-breakpoint-up(md) {
+          width: 100%;
+          height: 110px;
+          margin: 0 0 24px;
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .desc {
+        text-align: center;
+      }
+    }
+  }
+  .slides-controls {
+    padding-top: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+      padding-top: 19px;
+      padding-right: 10px;
+    }
+    .lb {
+      display: none;
+      @include media-breakpoint-up(lg) {
+        display: block;
+        font-size: 13px;
+        letter-spacing: 1.67px;
+        font-weight: $font-weight-bold;
+        margin-right: 17px;
+      }
+    }
+    button {
+      border: 0 none;
+      background: transparent;
+      padding: 0;
+      font-size: 34px;
+      cursor: pointer;
+      color: $primary;
+      margin: 0 5px;
+      &:before {
+        font-size: 33px;
+      }
+    }
+    .slides-nav {
+      display: flex;
+    }
+  }
+}

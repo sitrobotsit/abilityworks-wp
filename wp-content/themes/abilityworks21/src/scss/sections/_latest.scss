@@ -1,0 +1,399 @@
+.st-latest {
+  .wrap {
+    @include media-breakpoint-up(md) {
+      width: 570px;
+      margin: 0 auto;
+    }
+    // @include media-breakpoint-up(xl) {
+    //   width: $container-lg;
+    // }
+    @include media-breakpoint-up(xl) {
+      width: $container-xl;
+    }
+  }
+  .st-title {
+    text-align: center;
+    padding: 0 35px;
+    margin: 0 0 22px;
+    @include media-breakpoint-up(xl) {
+      font-size: 50px;
+      margin: 0 0 50px;
+      padding: 0;
+    }
+  }
+  .the-grid {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
+    .grid-row {
+      @include media-breakpoint-up(md) {
+        &:last-child {
+          .grid-col {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        display: flex;
+        justify-content: space-between;
+        margin-left: -15px;
+        margin-right: -15px;
+        &:first-child {
+        }
+        &:last-child {
+          flex-direction: row-reverse;
+          margin-bottom: 30px;
+        }
+      }
+      .grid-col {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 30px;
+        }
+        @include media-breakpoint-up(xl) {
+          flex: 1;
+          padding: 0 15px;
+          width: 50%;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  button {
+    background: transparent;
+    padding: 0;
+    font-size: 34px;
+    color: $primary;
+    cursor: pointer;
+    transition: all .3 ease;
+    border: 0 none;
+    margin: 0 5px;
+    transition: all .3s ease;
+    &:before {
+      font-size: 33px;
+    }
+    &:hover {
+      color: $soft-blue;
+    }
+  }
+  .newsroom-carousel {
+    @include media-breakpoint-up(md) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .item {
+      @include media-breakpoint-up(md) {
+        padding: 0 15px;
+      }
+      .post-image {
+        display: block;
+        height: 237px;
+        background-color: $primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &:first-child {
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+        }
+        &:last-child {
+          display: none;
+          @include media-breakpoint-up(md) {
+            display: block;
+            height: 258px;
+            border-radius: 0 0 $border-radius $border-radius;
+          }
+        }
+        &.with-play {
+          position: relative;
+          &:before {
+            font-family: icomoon;
+            content: "\e912";
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: $turquoise;
+            color: $white;
+            font-size: 14px;
+            padding: 0 0 0 16px;
+            line-height: 38px;
+          }
+        }
+      }
+      .details {
+        background-color: $off-white-3;
+        padding: 40px 26px 100px;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+          height: 282px;
+          border-radius: $border-radius $border-radius 0 0;
+          padding: 26px 25px 30px;
+          text-align: left;
+        }
+        .post-tag {
+          font-size: 13px;
+          letter-spacing: 1.67px;
+          font-weight: $font-weight-bold;
+          margin-bottom: 16px;
+          text-transform: uppercase;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 24px;
+          }
+        }
+        h4 {
+          font-family: $font-family-fsme-bold;
+          font-size: 20px;
+          line-height: 1.2;
+          margin: 0 0 16px;
+          @include media-breakpoint-up(md) {
+            max-height: 72px;
+            overflow: hidden;
+
+          }
+        }
+        p {
+          margin: 0 0 16px;
+        }
+        .more {
+          color: $gray-800;
+          text-decoration: underline;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+  .newsroom-carousel-controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(md) {
+      padding-top: 20px;
+      justify-content: flex-end;
+      margin-right: -5px;
+    }
+    .btn-play-newsroom {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+    .newsroom-carousel-nav {
+      display: flex;
+      position: absolute;
+      bottom: 43px;
+      @include media-breakpoint-up(md) {
+        position: static;
+      }
+    }
+  }
+  .social-carousel {
+    @include media-breakpoint-up(md) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .item {
+      @include media-breakpoint-up(md) {
+        padding: 0 15px;
+      }
+      .item-image {
+        display: block;
+        height: 237px;
+        background-color: $primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        &:first-child {
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
+        }
+        &:last-child {
+          display: none;
+          @include media-breakpoint-up(md) {
+            display: block;
+            height: 258px;
+            border-radius: 0 0 $border-radius $border-radius;
+          }
+        }
+      }
+      .details {
+        background-color: $ice-blue;
+        padding: 40px 26px 100px;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+          height: 282px;
+          border-radius: $border-radius $border-radius 0 0;
+          padding: 26px 25px 30px;
+          text-align: left;
+        }
+        .item-label {
+          font-size: 13px;
+          letter-spacing: 1.67px;
+          font-weight: $font-weight-bold;
+          margin-bottom: 16px;
+          text-transform: uppercase;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 24px;
+          }
+        }
+        .item-desc {
+          font-family: $font-family-fsme-bold;
+          font-size: 20px;
+          line-height: 1.2;
+          margin: 0 0 20px;
+          @include media-breakpoint-up(md) {
+            max-height: 145px;
+            overflow: hidden;
+          }
+        }
+        .more {
+          color: $gray-800;
+          text-decoration: underline;
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+  .social-carousel-controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(md) {
+      padding-top: 20px;
+      justify-content: flex-end;
+      margin-right: -5px;
+    }
+    .btn-play-social {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+    .social-carousel-nav {
+      display: flex;
+      position: absolute;
+      bottom: 43px;
+      @include media-breakpoint-up(md) {
+        position: static;
+      }
+    }
+  }
+  .testimonial-carousel {
+    .item {
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 320px;
+      }
+      .item-image {
+        height: 237px;
+        background-color: $primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include media-breakpoint-up(md) {
+          width: 49%;
+          height: auto;
+          border-radius: 0 $border-radius $border-radius 0;
+        }
+      }
+      .details {
+        padding: 54px 32px 106px;
+        text-align: center;
+        @include media-breakpoint-up(md) {
+          text-align: left;
+          width: 51%;
+          border-radius: $border-radius 0 0 $border-radius;
+          padding: 22px 20px 75px 21px;
+        }
+        .inn {
+          @include media-breakpoint-up(md) {
+            height: 223px;
+            overflow-y: hidden;
+          }
+        }
+        .subtitle {
+          font-size: 13px;
+          letter-spacing: 1.67px;
+          font-weight: $font-weight-bold;
+          margin-bottom: 16px;
+          text-transform: uppercase;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 12px;
+          }
+        }
+        blockquote {
+          margin-bottom: 18px;
+          @include media-breakpoint-up(md) {
+            margin-bottom: 8px;
+          }
+        }
+        .author {
+          font-weight: $font-weight-bold;
+          @include media-breakpoint-up(md) {
+            max-height: 72px;
+            overflow: hidden;
+
+          }
+        }
+      }
+    }
+  }
+  .testimonial-carousel-controls {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .testimonial-carousel-nav {
+      position: absolute;
+      bottom: 54px;
+      @include media-breakpoint-up(md) {
+        left: 21px;
+        bottom: 20px;
+      }
+    }
+  }
+  .video-block {
+    background: $primary;
+    @include media-breakpoint-up(md) {
+      border-radius: $border-radius;
+      overflow: hidden;
+    }
+    a {
+      display: block;
+      background-color: $primary;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      height: 237px;
+      @include media-breakpoint-up(md) {
+        height: 320px;
+      }
+      &:before {
+        font-family: icomoon;
+        content: "\e912";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        background: $turquoise;
+        color: $white;
+        font-size: 30px;
+        padding: 0 0 0 27px;
+      }
+    }
+  }
+}

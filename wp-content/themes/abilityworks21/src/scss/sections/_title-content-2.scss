@@ -1,0 +1,63 @@
+.st-title-content-2 {
+  background: $primary;
+  color: $white;
+  padding: 60px 0;
+  .inn {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  aside {
+    margin-bottom: 30px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: unset;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 25.641%;
+      margin-right: 8.547%;
+      margin-bottom: 0;
+    }
+    h2.title {
+      font-size: 30px;
+      font-weight: $font-weight-bold;
+      line-height: 1.167;
+      margin: 0;
+      @include media-breakpoint-up(md) {
+        font-size: 40px;
+        line-height: 1.125;
+      }
+    }
+    .subtitle {
+      padding-top: 20px;
+      font-size: 16px;
+      letter-spacing: .9px;
+      @include media-breakpoint-up(md) {
+        padding-top: 15px;
+      }
+    }
+  }
+  .content {
+    color: $white;
+    font-size: 18px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: unset;
+    }
+    @include media-breakpoint-up(lg) {
+      flex: 1;
+    }
+    p {
+      margin-bottom: 1.6em;
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+    .ico-list {
+      text-align: left;
+      margin-bottom: 1.6em;
+    }
+  }
+}

@@ -1,0 +1,116 @@
+.st-cta {
+  color: $white;
+  padding: 50px 0;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    padding: 60px 0;
+    text-align: left;
+  }
+  &.light {
+    .title {
+      color: $primary;
+    }
+    .format {
+      color: $gray-800;
+      a {
+        color: $gray-800;
+      }
+    }
+    .btn {
+      border-color: $primary;
+      color: $primary;
+      &:hover {
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+  .format {
+    color: $white;
+    line-height: 1.25;
+  }
+  .inn {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  .title {
+    font-size: 25px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    padding: 0 22px;
+    font-weight: $font-weight-bold;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+      font-size: 40px;
+      line-height: 1.2;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 33.3333%;
+      margin-bottom: 0;
+      margin-top: -12px;
+    }
+  }
+  .desc {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+  .btn {
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 22px;
+    height: auto;
+    padding: 12px 45px 12px 16px;
+    line-height: 19px;
+    text-decoration: none;
+    position: relative;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      left: 15px;
+      bottom: 0;
+    }
+    &:hover {
+      background: $white;
+      color: $primary;
+    }
+    &:after {
+      font-family: icomoon;
+      content: "\e90f";
+      font-size: 8px;
+      line-height: 1;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .col-first {
+    margin-bottom: 40px;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      margin-bottom: 0;
+      position: relative;
+      padding: 0 15px 63px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 33.3333%;
+    }
+  }
+  .col-second {
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      position: relative;
+      padding: 0 15px 63px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 33.3333%;
+    }
+  }
+}

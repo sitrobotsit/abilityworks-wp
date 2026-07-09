@@ -1,0 +1,29 @@
+@function ContainerMaxWidth($key: 'md') {
+  @return map-get($container-max-widths, $key);
+}
+
+@mixin HoverUnderlineAnim($color) {
+  position: relative;
+  &:hover {
+    &:before, &:after {
+      width: 50%;
+      opacity: 1;
+    }
+  }
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    height: 1px;
+    width: 0%;
+    background: $color;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+  }
+  &:before {
+    left: 50%;
+  }
+  &:after {
+    right: 50%;
+  }
+}

@@ -1,0 +1,174 @@
+.st-welcome {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  padding-top: 66px;
+  padding-bottom: 10px;
+  @include media-breakpoint-up(md) {
+    padding-top: 50px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 65px;
+    padding-bottom: 40px;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-top: 80px;
+  }
+  .banner-text {
+    text-align: center;
+    margin-bottom: 24px;
+    @include media-breakpoint-up(md) {
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      max-width: 640px;
+      margin: 0 0 50px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 440px;
+      margin-bottom: 70px;
+    }
+    .headline {
+      font-weight: $font-weight-bold;
+      font-size: 40px;
+      line-height: 1.125;
+      margin-bottom: .5em;
+      @include media-breakpoint-up(lg) {
+        font-size: 55px;
+        margin-bottom: 22px;
+      }
+    }
+    .intro {
+      font-size: 18px;
+      line-height: 1.25;
+      margin: 0 12px;
+      @include media-breakpoint-up(md) {
+        margin: 0;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 20px;
+      }
+    }
+  }
+  .panels {
+    padding: 0 30px;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      justify-content: center;
+    }
+    .panel {
+      position: relative;
+      margin-bottom: 30px;
+      padding: 25px 15px 30px;
+      text-align: center;
+      @include media-breakpoint-up(md) {
+        width: calc(33.3333% - 10px);
+      }
+      @include media-breakpoint-up(lg) {
+        width: 270px;
+        margin: 0 25px;
+        padding-top: 28px;
+        padding-bottom: 30px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: $white;
+        border-radius: 18px;
+        box-shadow: 4px 4px 15px 0 rgba($black, .2);
+        z-index: 0;
+        transition: all .3s ease;
+      }
+      &:hover {
+        &:after, a {
+          transform: scale(1.05);
+        }
+        .btn {
+          background: $blue;
+          color: $white;
+        }
+      }
+      a {
+        text-indent: -99999px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+      }
+      .icon {
+        position: relative;
+        z-index: 2;
+        height: 100px;
+        margin-bottom: 8px;
+        @include media-breakpoint-up(lg) {
+          height: 140px;
+          margin-bottom: 32px;
+        }
+        img {
+          max-height: 100%;
+          width: auto;
+          @include media-breakpoint-up(lg) {
+            max-height: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      h2 {
+        position: relative;
+        z-index: 2;
+        font-weight: $font-weight-bold;
+        font-size: 40px;
+        line-height: 1.125;
+        margin: 0 0 8px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 12px;
+        }
+      }
+      h5 {
+        position: relative;
+        z-index: 2;
+        font-weight: $font-weight-normal;
+        font-size: 16px;
+        letter-spacing: .9px;
+        margin: 0 0 25px;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 19px;
+        }
+      }
+      .btn {
+        z-index: 2;
+        position: relative;
+        border-radius: 22px;
+        border: 1px solid $blue;
+        color: $blue;
+        padding: 12px 45px 12px 16px;
+        line-height: 19px;
+        transition: all .3s ease;
+        &:after {
+          font-family: icomoon;
+          content: "\e90f";
+          font-size: 8px;
+          position: absolute;
+          right: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

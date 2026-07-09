@@ -1,0 +1,39 @@
+.st-testimonial {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-top: 137px;
+  padding-bottom: 80px;
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    background-size: auto;
+    padding-top: 65px;
+    padding-bottom: 68px;
+  }
+  @include media-breakpoint-up(lg) {
+    background-size: auto 100%;
+  }
+  // @include media-breakpoint-up(xl) {
+  //   background-size: auto 100%;
+  // }
+  .inn {
+    max-width: 565px;
+    margin: 0 auto;
+  }
+  blockquote {
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: $font-weight-bold;
+    color: $primary;
+    margin: 0 0 12px;
+    @include media-breakpoint-up(md) {
+      font-size: 25px;
+      line-height: 1.2;
+      font-style: italic;
+    }
+  }
+  .author {
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    margin: 0 50px;
+  }
+}

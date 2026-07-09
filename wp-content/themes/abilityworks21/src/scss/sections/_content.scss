@@ -1,0 +1,8 @@
+.st-content {
+  .content {
+    @include media-breakpoint-down(md) {
+      text-align: center;
+      // max-width: none !important;
+    }
+  }
+}

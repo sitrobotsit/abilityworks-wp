@@ -1,0 +1,21 @@
+.st-title-content {
+  .inn {
+    margin: 0 auto;
+  }
+  .st-title {
+    text-align: center;
+    margin: 0 0 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .content {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.1875;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+      line-height: 1.25;
+    }
+  }
+}

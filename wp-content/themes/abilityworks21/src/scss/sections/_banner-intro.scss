@@ -1,0 +1,308 @@
+.st-banner-intro {
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100% auto;
+  padding-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    padding-bottom: 75px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 100px;
+  }
+  .intro-box-graph {
+    margin-bottom: 25px;
+    @include media-breakpoint-up(md) {
+      width: 131px;
+      margin-left: 34px;
+    }
+    .sc-icon {
+      display: none;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+  }
+  .btn-recap-home {
+    display: block;
+    border: 2px solid $primary;
+    border-radius: 25px;
+    position: relative;
+    line-height: 48px;
+    padding: 0 50px 0 70px;
+    text-align: left;
+    text-decoration: none;
+    transition: all .3s ease;
+    @include media-breakpoint-up(md) {
+      text-align: center;
+      border-width: 3px;
+      line-height: 1.2em;
+      width: 131px;
+      padding: 11px 5px;
+    }
+    &:hover {
+      color: $primary;
+      background-color: $gray-100;
+    }
+    &:after {
+      font-family: icomoon;
+      content: "\e90f";
+      font-size: 12px;
+      line-height: 1;
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include media-breakpoint-up(md) {
+        display: none;
+      }
+    }
+    img {
+      position: absolute;
+      left: 41px;
+      top: 50%;
+      height: 38px;
+      transform: translate(-50%, -50%);
+      @include media-breakpoint-up(md) {
+        position: static;
+        transform: none;
+        height: 80px;
+      }
+    }
+    span {
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+      @include media-breakpoint-up(md) {
+        font-size: 12px;
+        display: block;
+        padding-top: 5px;
+      }
+    }
+    +.sc-icon {
+      @include media-breakpoint-up(md) {
+        margin-top: 20px;
+      }
+    }
+  }
+  .intro-box {
+    background: $white;
+    border-radius: 18px;
+    padding: 25px 24px;
+    margin: 0 10px;
+    max-width: 800px;
+    box-shadow: 4px 4px 15px 0px rgba($black, .2);
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      padding: 35px 40px 30px;
+      border-radius: 23px;
+      text-align: left;
+      margin: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    .title {
+      color: $gray-800;
+      margin: 0 0 20px;
+      @include media-breakpoint-up(md) {
+        display: flex;
+        margin-bottom: 25px;
+      }
+      .icon {
+        height: 100px;
+        margin-bottom: 15px;
+        position: relative;
+        @include media-breakpoint-up(md) {
+          width: 85px;
+          height: auto;
+          margin: 0 19px 0 0;
+        }
+        img {
+          max-height: 100%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .text {
+        @include media-breakpoint-up(md) {
+          flex: 1;
+        }
+        h1 {
+          font-size: 40px;
+          line-height: 1.15;
+          color: $gray-800;
+          font-weight: $font-weight-bold;
+          margin: 0;
+          @include media-breakpoint-up(md) {
+            font-size: 50px;
+          }
+          @include media-breakpoint-up(lg) {
+            font-size: 55px;
+          }
+        }
+        .subtitle {
+          padding-top: 8px;
+          letter-spacing: .9px;
+        }
+      }
+      .sc-icon {
+        padding-top: 25px;
+        max-width: 160px;
+        margin: 0 auto;
+        @include media-breakpoint-up(md) {
+          display: none;
+        }
+      }
+    }
+    .content {
+      margin-bottom: 20px;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    .links {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @include media-breakpoint-up(md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      &.layout-row {
+        @include media-breakpoint-up(md) {
+          align-items: center;
+        }
+      }
+      &.layout-column {
+        @include media-breakpoint-up(md) {
+          display: block;
+          li {
+            a {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      li {
+        margin-bottom: 10px;
+        @include media-breakpoint-up(md) {
+          padding: 0 15px;
+          margin: 0 0 15px;
+        }
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 20px;
+        }
+        a {
+          color: $blue;
+          &:hover {
+            color: $red;
+          }
+        }
+        .btn-fill-round {
+          display: block;
+          border: 1px solid $primary;
+          padding: 14px 64px 14px 21px;
+          text-align: left;
+          border-radius: 25px;
+          background: $primary;
+          color: $white;
+          transition: all .3s ease;
+          @include media-breakpoint-up(lg) {
+            border-radius: 30px;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 16px 65px 16px 23px;
+          }
+          &:hover {
+            background: transparent;
+            color: $primary;
+          }
+          &:before {
+            right: 15px;
+            font-size: 12px;
+            font-weight: normal;
+            @include media-breakpoint-up(lg) {
+              font-size: 14px;
+              right: 24px;
+            }
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .btn-fill-round-2 {
+          display: block;
+          border: 1px solid $grey-blue;
+          padding: 14px 64px 14px 21px;
+          text-align: left;
+          border-radius: 25px;
+          background: $grey-blue;
+          color: $primary;
+          transition: all .3s ease;
+          @include media-breakpoint-up(lg) {
+            border-radius: 30px;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 16px 65px 16px 23px;
+          }
+          &:hover {
+            background: transparent;
+            color: $primary;
+            border-color: $primary;
+          }
+          &:before {
+            right: 15px;
+            font-size: 12px;
+            font-weight: normal;
+            @include media-breakpoint-up(lg) {
+              font-size: 14px;
+              right: 24px;
+            }
+          }
+          &:after {
+            display: none;
+          }
+        }
+        .btn-outline-round {
+          display: block;
+          border: 1px solid $primary;
+          padding: 14px 64px 14px 21px;
+          text-align: left;
+          border-radius: 25px;
+          background: transparent;
+          color: $primary;
+          transition: all .3s ease;
+          @include media-breakpoint-up(lg) {
+            border-radius: 30px;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 16px 65px 16px 23px;
+          }
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+          &:before {
+            right: 15px;
+            font-size: 12px;
+            font-weight: normal;
+            @include media-breakpoint-up(lg) {
+              font-size: 14px;
+              right: 24px;
+            }
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.st-content-carousel {
+  .inn {
+    @include media-breakpoint-up(lg) {
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      max-width: ContainerMaxWidth('lg');
+      margin: 0 auto;
+      .ct {
+        width: 42.31%;
+      }
+      .crs {
+        width: 51.28%;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: ContainerMaxWidth('xl');
+    }
+  }
+  .ct {
+    text-align: center;
+    padding: 0 $grid-gutter-width/2;
+    margin: 0 auto 30px;
+    @include media-breakpoint-up(md) {
+      max-width: ContainerMaxWidth('md');
+    }
+    @include media-breakpoint-up(lg) {
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .images-carousel {
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: auto !important;
+        @include media-breakpoint-up(lg) {
+          border-radius: 18px;
+        }
+      }
+    }
+  }
+  .carousel-arrows {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+      padding:0;
+    }
+    button {
+      border: 1px solid;
+      color: $primary;
+      background: transparent;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      padding: 0;
+      transition: all .3s ease;
+      outline: none;
+      margin: 20px 5px;
+      @include media-breakpoint-up(lg) {
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-top: 40px;
+      }
+      &:hover {
+        background: $primary;
+        border-color: $primary;
+        color: $white;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.slick-disabled {
+        color: $gray-400;
+      }
+    }
+  }
+}

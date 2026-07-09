@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4099017, 2021-06-07T02:08:09-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FSMe-Bold by Fontsmith
+ * URL: https://www.myfonts.com/fonts/fontsmith/fs-me/bold/
+ * Copyright: Copyright (c) 2009 by Fontsmith Ltd. All rights reserved. This font may not be altered in any way without prior permission of Fontsmith Ltd.
+ * 
+ * 
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3e8bc9");
+  
+@font-face {
+  font-family: "FSMe-Bold";
+  src: url('webFonts/FSMeBold/font.woff2') format('woff2'), url('webFonts/FSMeBold/font.woff') format('woff');
+}
+

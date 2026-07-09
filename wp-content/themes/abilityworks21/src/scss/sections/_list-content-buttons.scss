@@ -1,0 +1,92 @@
+.st-list-content-buttons {
+  .item {
+    padding-top: 38px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid $primary;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 43px;
+      padding-bottom: 50px;
+    }
+    &:last-child {
+      border-bottom: 0 none;
+      @include media-breakpoint-up(md) {
+        border-bottom: 1px solid $primary;
+      }
+    }
+    &:only-child {
+      border-bottom: 0 none;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .item-text {
+      text-align: center;
+      margin: 0 0 30px;
+      @include media-breakpoint-up(md) {
+        text-align: unset;
+        width: 63.8%;
+        margin-bottom: 0;
+      }
+      .title {
+        font-size: 25px;
+        font-weight: $font-weight-bold;
+        color: $primary;
+        margin-bottom: 20px;
+        @include media-breakpoint-up(md) {
+          font-size: 30px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .item-btns {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      @include media-breakpoint-up(md) {
+        width: 31.45%;
+      }
+      li {
+        margin-bottom: 20px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 18px;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .arrow-link {
+          display: block;
+          text-decoration: none;
+          border-radius: 24px;
+          border: 1px solid $primary;
+          padding: 14px 50px 14px 23px;
+          font-size: 16px;
+          line-height: 20px;
+          transition: all .3s ease;
+          @include media-breakpoint-up(lg) {
+            font-size: 18px;
+            line-height: 22px;
+            padding: 16px 55px 16px 25px;
+            border-radius: 28px;
+          }
+          &:hover {
+            background: $primary;
+            color: $white;
+          }
+          &:before {
+            right: 20px;
+            font-size: 11px;
+            @include media-breakpoint-up(lg) {
+              font-size: 13px;
+            }
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
