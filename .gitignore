@@ -6,6 +6,7 @@
 # But keep this file tracked.
 !/.gitignore
 !/.cpanel.yml
+!/AGENTS.md
 
 # Allow traversing into the theme path.
 !/wp-content/
