@@ -8,7 +8,7 @@
   ?>
     <?php get_template_part( 'templates/sections/breadcrumb' ); ?>
 
-    <section class="ca-sections">
+    <section class="ca-sections" id="main-content">
       <?php
         get_template_part( 'templates/sections/spacer', null, [
           'bg_color' => '#ffffff',

@@ -13,21 +13,23 @@ get_header(); ?>
   ?>
     <?php get_template_part( 'templates/sections/breadcrumb' ); ?>
 
-    <?php if ( have_rows('ca_sections') ) : ?>
-      <!-- Sections Start -->
-      <section class="ca-sections">
-        <?php
-          $sectionCounter = 0;
-          while ( have_rows('ca_sections') ) :
-            the_row();
-            $sectionCounter++;
-            $sectionLayout = get_row_layout();
-        ?>
-          <?php get_template_part( 'templates/sections/' . $sectionLayout ); ?>
-        <?php endwhile; ?>
-      </section>
-      <!-- Sections End -->
-    <?php endif; ?>
+    <div id="main-content">
+      <?php if ( have_rows('ca_sections') ) : ?>
+        <!-- Sections Start -->
+        <section class="ca-sections">
+          <?php
+            $sectionCounter = 0;
+            while ( have_rows('ca_sections') ) :
+              the_row();
+              $sectionCounter++;
+              $sectionLayout = get_row_layout();
+          ?>
+            <?php get_template_part( 'templates/sections/' . $sectionLayout ); ?>
+          <?php endwhile; ?>
+        </section>
+        <!-- Sections End -->
+      <?php endif; ?>
+    </div>
   <?php
       endwhile;
     endif;

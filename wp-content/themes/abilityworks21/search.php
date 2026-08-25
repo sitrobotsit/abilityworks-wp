@@ -5,7 +5,7 @@ get_header();
 <main id="main">
   <?php get_template_part( 'templates/sections/breadcrumb' ); ?>
 
-  <section class="st-search-results">
+  <section class="st-search-results" id="main-content">
     <h2 class="titlebar d-lg-none">
       <span class="txt">Search Results</span>
       <span class="bg"></span>

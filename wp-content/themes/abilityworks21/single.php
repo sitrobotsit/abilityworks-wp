@@ -8,7 +8,7 @@
   ?>
     <?php get_template_part( 'templates/sections/breadcrumb', null, ['restricted_width' => true] ); ?>
 
-    <section class="ca-sections">
+    <section class="ca-sections" id="main-content">
       <?php
         get_template_part( 'templates/post/details' );
 

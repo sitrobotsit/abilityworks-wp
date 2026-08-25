@@ -19,11 +19,7 @@ Text Domain: aw
   color: #000;
   background: #FFF;
 }
+.admin-bar .skip-link {top: 32px;}
+.skip-link:focus {right: auto;}
 
-.admin-bar .skip-link {
-  top: 32px;
-}
-
-.skip-link:focus {
-  right: auto;
-}
+.st-caro-19 .slides-controls button:before {font-size: unset !important;}

@@ -2,7 +2,7 @@
 <main id="main">
   <?php get_template_part( 'templates/sections/breadcrumb' ); ?>
 
-  <section class="st-search-results">
+  <section class="st-search-results" id="main-content">
     <h2 class="titlebar d-lg-none">
       <span class="txt"><span style="display: inline-block;max-width: 60%;"><?php the_field('ca_404_title', 'option'); ?></span></span>
       <span class="bg"></span>

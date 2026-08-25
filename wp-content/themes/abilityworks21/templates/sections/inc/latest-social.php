@@ -1,10 +1,16 @@
 <?php
-$fbPosts = AW_Helpers::FacebookPosts( 10 );
-// echo '<pre>';
-// print_r($fbPosts);
-// echo '</pre>';
-// exit;
-$instaPosts = AW_Helpers::InstagramPosts( 10 );
+$isLocal = isset($_SERVER['SERVER_NAME']) && $_SERVER['SERVER_NAME']=='abilityworks.local';
+
+// $fbPosts = AW_Helpers::FacebookPosts( 10 );
+// $instaPosts = AW_Helpers::InstagramPosts( 10 );
+$fbPosts = AW_Helpers::FacebookPosts2025($isLocal ? 12045 : 12041);
+$instaPosts = AW_Helpers::InstagramPosts2025($isLocal ? 12041 : 12039);
+if (isset($_GET['debug']) && $_GET['debug']=='social') {
+  echo '<pre>';
+  print_r($fbPosts);
+  echo '</pre>';
+  exit;
+}
 $items = [];
 for ($i=0; $i<10; $i++) {
   if ( $i%2 ) {
