@@ -44,7 +44,7 @@ $post_embed_media = get_field('post_embed_media');
           <p class="post-meta">
             <?php echo strip_tags(get_the_tag_list('', ', ', '')); ?>
             <span class="sep">|</span>
-            <?php the_date();?>
+            <?php echo get_the_date('j F Y'); ?>
           </p>
           <?php the_content(); ?>
         </div>

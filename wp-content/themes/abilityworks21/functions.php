@@ -41,6 +41,7 @@ class AbilityWorks
     add_filter('excerpt_length', [$this, 'excerpt_length'], 999 );
     add_filter('excerpt_more', [$this, 'excerpt_more'] );
     add_filter('wp_nav_menu_args', [$this, 'wp_nav_menu_args'] );
+    add_filter('option_date_format', [$this, 'option_date_format']);
 
     add_action( 'wp_ajax_nopriv_aw_load_faqs', [$this, 'load_faqs'] );
     add_action( 'wp_ajax_aw_load_faqs', [$this, 'load_faqs'] );
@@ -254,6 +255,11 @@ class AbilityWorks
     return array_merge($args, [
       'walker' => new AW_Menu_Walker,
     ]);
+  }
+
+  public function option_date_format( $format )
+  {
+    return 'j F Y';
   }
 
   public function fix_shortcodes( $content )

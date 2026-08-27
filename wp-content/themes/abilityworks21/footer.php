@@ -1,7 +1,7 @@
 <footer id="footer" class="d-print-none">
   <?php
     $logos = get_field('ca_logo_slider_logos', 'option');
-    if ( sizeof($logos) ) :
+    if ( !empty($logos) ) :
   ?>
     <section class="footer-logos">
       <div class="container">

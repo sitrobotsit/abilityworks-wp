@@ -13,5 +13,5 @@
 
 <div class="more">
   <a href="<?php the_permalink(); ?>" class="btn btn-outline-dark">READ MORE</a>
-  <span class="post-date"><?php echo get_the_date('jS M Y'); ?></span>
+  <span class="post-date"><?php echo get_the_date('j F Y'); ?></span>
 </div>
