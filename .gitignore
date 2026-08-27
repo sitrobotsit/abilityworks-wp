@@ -1,3 +1,22 @@
-# macOS
+# Ignore everything at the repo root by default
+/*
+
+# Keep project config tracked
+!/.gitignore
+!/.cpanel.yml
+
+# Allow traversing into wp-content, but ignore its contents
+!/wp-content/
+/wp-content/*
+
+# Allow traversing into themes, but ignore other themes
+!/wp-content/themes/
+/wp-content/themes/*
+
+# Track only the custom theme
+!/wp-content/themes/abilityworks21/
+!/wp-content/themes/abilityworks21/**
+
+# macOS (after whitelist so these stay ignored)
 .DS_Store
 **/.DS_Store
