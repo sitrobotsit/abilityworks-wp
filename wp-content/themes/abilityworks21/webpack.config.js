@@ -1,102 +1,89 @@
 const webpack = require('webpack');
 const path = require('path');
-
-// include the js minification plugin
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
-// const TerserPlugin = require('terser-webpack-plugin');
-
-// include the css extraction and minification plugins
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './src/js/script.js',
-    './src/scss/style.scss',
-  ],
+  entry: ['./src/js/script.js', './src/scss/style.scss'],
   output: {
     filename: './js/script.min.js',
-    path: path.resolve(__dirname)
+    path: path.resolve(__dirname),
+    assetModuleFilename: 'fonts/[hash][ext][query]',
   },
   module: {
     rules: [
-      // perform js babelization on all .js files
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
-      // compile all .scss files to plain old css
       {
         test: /\.(sass|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+              sassOptions: {
+                quietDeps: true,
+                silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'slash-div'],
+              },
+            },
+          },
+        ],
       },
       {
-        test: /\.(png|jp(e*)g|gif)$/,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            outputPath: './images/',
-            publicPath: '../images/',
-            limit: 8000, // Convert images < 8kb to base64 strings
-            name: '[hash]-[name].[ext]'
-          }
-        }]
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8000,
+          },
+        },
+        generator: {
+          filename: 'images/[hash][ext][query]',
+          publicPath: '../images/',
+        },
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            outputPath: './fonts/',
-            publicPath: '../fonts/',
-          }
-        }
-      }
-    ]
+        test: /\.(woff2?|eot|ttf|otf|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]',
+          publicPath: '../fonts/',
+        },
+      },
+    ],
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
     }),
-    // extract css into dedicated file
     new MiniCssExtractPlugin({
-      filename: './css/style.min.css'
+      filename: './css/style.min.css',
     }),
-    new BrowserSyncPlugin({
-      files: [
-        './**/*.php',
-        './css/*.css',
-      ],
-      injectChanges: true,
-      // injectCss: true,
-      proxy: 'http://abilityworks.local'
-    }, {
-      reload: false
-    })
+    new BrowserSyncPlugin(
+      {
+        files: ['./**/*.php', './css/*.css'],
+        injectChanges: true,
+        proxy: 'http://localhost:8080',
+      },
+      {
+        reload: false,
+      }
+    ),
   ],
   optimization: {
-    minimizer: [
-      // enable the js minification plugin
-      new UglifyJSPlugin({
-        cache: true,
-        parallel: true
-      }),
-      new OptimizeCSSAssetsPlugin({})
-    ],
-    // splitChunks: {
-    //   chunks: 'all'
-    // },
-    // minimize: true,
-    // minimizer: [new TerserPlugin()],
-  }
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+  },
 };

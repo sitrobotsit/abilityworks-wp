@@ -272,6 +272,7 @@ $caret-spacing:               $caret-width * .85 !default;
 $transition-base:             all .2s ease-in-out !default;
 $transition-fade:             opacity .15s linear !default;
 $transition-collapse:         height .35s ease !default;
+$transition-collapse-width:   width .35s ease !default;
 
 $embed-responsive-aspect-ratios: () !default;
 $embed-responsive-aspect-ratios: join(
@@ -309,16 +310,16 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.25 !default;
 
 $h1-font-size:                56px !default;
-$h2-font-size:                40px !default;
-$h3-font-size:                50px !default;
+$h2-font-size:                2rem !default;
+$h3-font-size:                1.5rem !default;
 $h4-font-size:                30px !default;
 $h5-font-size:                20px !default;
 $h6-font-size:                22px !default;
 
-$headings-margin-bottom:      $spacer / 2 !default;
+$headings-margin-bottom:      .5rem !default;
 $headings-font-family:        null !default;
-$headings-font-weight:        $font-weight-normal !default;
-$headings-line-height:        1.2 !default;
+$headings-font-weight:        400 !default;
+$headings-line-height:        1.8 !default;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;

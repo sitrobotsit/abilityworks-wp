@@ -4,6 +4,7 @@
 # Keep project config tracked
 !/.gitignore
 !/.cpanel.yml
+!/docker-compose.yml
 
 # Allow traversing into wp-content, but ignore its contents
 !/wp-content/
@@ -16,6 +17,9 @@
 # Track only the custom theme
 !/wp-content/themes/abilityworks21/
 !/wp-content/themes/abilityworks21/**
+
+# Build/tooling artifacts inside the theme
+/wp-content/themes/abilityworks21/node_modules/
 
 # macOS (after whitelist so these stay ignored)
 .DS_Store
