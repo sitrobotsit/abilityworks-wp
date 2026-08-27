@@ -50,16 +50,18 @@ module.exports = {
           },
         },
         generator: {
+          // Emitted under theme/images/; CSS lives in theme/css/
           filename: 'images/[hash][ext][query]',
-          publicPath: '../images/',
+          publicPath: '../',
         },
       },
       {
         test: /\.(woff2?|eot|ttf|otf|svg)$/i,
         type: 'asset/resource',
         generator: {
+          // Emitted under theme/fonts/; CSS lives in theme/css/
           filename: 'fonts/[hash][ext][query]',
-          publicPath: '../fonts/',
+          publicPath: '../',
         },
       },
     ],
