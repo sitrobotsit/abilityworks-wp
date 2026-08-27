@@ -11,7 +11,7 @@
         <span class="bg"></span>
       </h2>
 
-      <h1 class="st-title"><span><?php the_title(); ?></span></h1>
+      <h1 id="page-heading" class="st-title"><span><?php the_title(); ?></span></h1>
 
       <div class="intro">
         <div class="format">

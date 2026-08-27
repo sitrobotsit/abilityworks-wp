@@ -1,4 +1,5 @@
 <?php
+global $sectionCounter;
 $button = get_sub_field('button');
 $text_color = get_sub_field('text_color');
 $mob_use_image = get_sub_field('mob_use_image');
@@ -13,7 +14,7 @@ $mob_use_image = get_sub_field('mob_use_image');
   <div class="banner">
     <div class="inn">
       <?php if ( $title = get_sub_field('title') ) : ?>
-        <h1 style="color: <?php echo $text_color; ?>;"><?php echo $title; ?></h1>
+        <h1 style="color: <?php echo $text_color; ?>;"<?php echo (int) $sectionCounter === 1 ? ' id="page-heading"' : ''; ?>><?php echo $title; ?></h1>
       <?php endif; ?>
       <?php if ( $subtitle = get_sub_field('subtitle') ) : ?>
         <p style="color: <?php echo $text_color; ?>;"><?php echo $subtitle; ?></p>

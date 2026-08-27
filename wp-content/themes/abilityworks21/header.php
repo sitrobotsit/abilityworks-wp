@@ -17,7 +17,7 @@ $contact_page_url = get_field('ca_contact_page_url', 'option');
 <![endif]-->
 </head>
 <body <?php echo body_class();?>>
-<a href="#main-content" class="skip-link">Skip to Main Content</a>
+<a href="#page-heading" class="skip-link">Skip to Main Content</a>
 <?php wp_body_open(); ?>
 <header id="header" class="d-print-none">
   <div class="inn">

@@ -12,7 +12,7 @@ get_header();
     </h2>
 
     <div class="container">
-      <h1 class="titlebar-lg"><span>Search results</span></h1>
+      <h1 id="page-heading" class="titlebar-lg"><span>Search results</span></h1>
 
       <?php if ( have_posts() ) : ?>
         <div class="results">

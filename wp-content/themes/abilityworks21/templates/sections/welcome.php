@@ -5,7 +5,7 @@ global $sectionCounter;
   <div class="container">
     <div class="banner-text" style="color:<?php the_sub_field('color'); ?>;">
       <?php if ( $headline = get_sub_field('headline') ) : ?>
-        <h1 class="headline"><?php echo $headline; ?></h1>
+        <h1 class="headline"<?php echo (int) $sectionCounter === 1 ? ' id="page-heading"' : ''; ?>><?php echo $headline; ?></h1>
       <?php endif; ?>
       <?php if ( $intro = get_sub_field('intro') ) : ?>
         <h4 class="intro"><?php echo $intro; ?></h4>

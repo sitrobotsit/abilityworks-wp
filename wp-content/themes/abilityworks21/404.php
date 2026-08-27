@@ -9,7 +9,7 @@
     </h2>
 
     <div class="container">
-      <h1 class="titlebar-lg"><span><?php the_field('ca_404_title', 'option'); ?></span></h1>
+      <h1 id="page-heading" class="titlebar-lg"><span><?php the_field('ca_404_title', 'option'); ?></span></h1>
 
       <div class="error-404">
         <div class="format">

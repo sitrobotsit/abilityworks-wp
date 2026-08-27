@@ -27,7 +27,7 @@ $secondary_icon = get_sub_field('secondary_icon');
           <?php endif; ?>
           <?php if ( !empty($title) ) : ?>
             <div class="text">
-              <h1><?php echo $title; ?></h1>
+              <h1<?php echo (int) $sectionCounter === 1 ? ' id="page-heading"' : ''; ?>><?php echo $title; ?></h1>
               <?php if ( !empty($subtitle) ) : ?>
                 <div class="subtitle"><?php echo $subtitle; ?></div>
               <?php endif; ?>

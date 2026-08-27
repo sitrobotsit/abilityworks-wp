@@ -1,3 +1,4 @@
+<?php global $sectionCounter; ?>
 <section <?php AW_Helpers::SectionAttrs('caro-09'); ?>>
   <div class="wrap">
     <div class="slides-wrapper">
@@ -29,7 +30,7 @@
 
     <div class="intro">
       <?php if ( $title = get_sub_field('title') ) : ?>
-        <h1 class="title d-none d-lg-block"><span><?php echo $title; ?></span></h1>
+        <h1 class="title d-none d-lg-block"<?php echo (int) $sectionCounter === 1 ? ' id="page-heading"' : ''; ?>><span><?php echo $title; ?></span></h1>
         <h2 class="titlebar with-bg d-lg-none">
           <span class="txt"><?php echo $title; ?></span>
           <span class="bg"></span>

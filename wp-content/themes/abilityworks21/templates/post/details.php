@@ -34,7 +34,7 @@ $post_embed_media = get_field('post_embed_media');
     </div>
 
     <div class="intro">
-      <h1 class="title d-none d-lg-block"><span><?php the_title(); ?></span></h1>
+      <h1 id="page-heading" class="title d-none d-lg-block"><span><?php the_title(); ?></span></h1>
       <h2 class="titlebar with-bg d-lg-none">
         <span class="txt"><?php the_title(); ?></span>
         <span class="bg"></span>
