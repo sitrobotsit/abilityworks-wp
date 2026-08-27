@@ -109,7 +109,7 @@ $intro-box-margin-right: 215px;
         padding: 0 8px;
         height: auto;
         @include media-breakpoint-up(lg) {
-          padding: 0 32px 0 0;
+          padding: 0 12px;
         }
       }
     }
@@ -123,9 +123,9 @@ $intro-box-margin-right: 215px;
       align-items: center;
       text-align: center;
       height: 100%;
+      width: 100%;
       @include media-breakpoint-up(lg) {
-        padding: 30px 30px 35px;
-        width: 229px;
+        padding: 30px 20px 35px;
       }
       h3.title {
         font-size: 18px;

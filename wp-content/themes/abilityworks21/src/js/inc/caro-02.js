@@ -29,14 +29,13 @@ jQuery($ => {
           breakpoint: 2561,
           settings: {
             centerMode: false,
-            variableWidth: true,
-            slidesToShow: 1,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
           }
         },
         {
