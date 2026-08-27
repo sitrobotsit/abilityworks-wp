@@ -51,6 +51,21 @@ class AW_Helpers
     ;
   }
 
+  /**
+   * Map legacy ACF carousel layouts to static replacement templates.
+   * Existing page content can keep caro-* layout names in the DB.
+   */
+  public static function ResolveSectionTemplate( $layout )
+  {
+    $map = [
+      'caro-18' => 'articles-latest',
+      'caro-19' => 'articles-by-tag',
+      'caro-20' => 'manual-cards',
+    ];
+
+    return isset( $map[ $layout ] ) ? $map[ $layout ] : $layout;
+  }
+
   public static function SectionStyles( $name, $index, $atts = [] )
   {
     $selector = ".st-{$name}[data-index='{$index}']";

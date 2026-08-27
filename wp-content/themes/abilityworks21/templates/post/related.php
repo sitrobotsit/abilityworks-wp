@@ -1,0 +1,77 @@
+<?php
+/**
+ * Related articles on single posts (formerly CARO 21).
+ * Uses the manually chosen ACF relationship field; shows the first two.
+ */
+$related_articles = get_field('post_related_articles');
+if ( empty( $related_articles ) || ! is_array( $related_articles ) ) {
+  return;
+}
+
+$related_ids = array_map( 'intval', $related_articles );
+$related_ids = array_values( array_filter( $related_ids ) );
+if ( empty( $related_ids ) ) {
+  return;
+}
+
+$query = new WP_Query([
+  'post_type' => 'post',
+  'post_status' => 'publish',
+  'posts_per_page' => 2,
+  'post__in' => $related_ids,
+  'orderby' => 'post__in',
+  'ignore_sticky_posts' => true,
+]);
+
+if ( ! $query->have_posts() ) {
+  return;
+}
+
+get_template_part( 'templates/sections/spacer', null, [
+  'bg_color' => '#f4364c',
+  'height_sm' => 1,
+  'height_md' => 1,
+  'height_lg' => 1,
+]);
+
+get_template_part( 'templates/sections/spacer', null, [
+  'bg_color' => '#ffffff',
+  'height_sm' => 40,
+  'height_md' => 50,
+  'height_lg' => 60,
+]);
+
+$page_for_posts = get_option( 'page_for_posts' );
+$page_for_posts_url = $page_for_posts ? get_permalink( $page_for_posts ) : home_url( '/' );
+?>
+<section class="st-related-articles">
+  <div class="container">
+    <div class="headline">
+      <h2 class="st-title">Other recent articles</h2>
+      <a href="<?php echo esc_url( $page_for_posts_url ); ?>">See all articles</a>
+    </div>
+
+    <div class="articles-grid">
+      <?php
+        while ( $query->have_posts() ) :
+          $query->the_post();
+      ?>
+        <article class="loop-post">
+          <?php get_template_part( 'templates/loop', 'post' ); ?>
+        </article>
+      <?php endwhile; ?>
+    </div>
+
+    <div class="footline">
+      <a href="<?php echo esc_url( $page_for_posts_url ); ?>">See all articles</a>
+    </div>
+  </div>
+</section>
+<?php
+get_template_part( 'templates/sections/spacer', null, [
+  'bg_color' => '#ffffff',
+  'height_sm' => 40,
+  'height_md' => 45,
+  'height_lg' => 50,
+]);
+wp_reset_postdata();

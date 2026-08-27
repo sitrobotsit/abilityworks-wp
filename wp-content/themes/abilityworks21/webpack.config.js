@@ -86,6 +86,18 @@ module.exports = {
     ),
   ],
   optimization: {
-    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+    minimizer: [
+      new TerserPlugin(),
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            'default',
+            {
+              mergeRules: false,
+            },
+          ],
+        },
+      }),
+    ],
   },
 };

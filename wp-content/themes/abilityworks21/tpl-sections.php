@@ -22,7 +22,7 @@ get_header(); ?>
             while ( have_rows('ca_sections') ) :
               the_row();
               $sectionCounter++;
-              $sectionLayout = get_row_layout();
+              $sectionLayout = AW_Helpers::ResolveSectionTemplate( get_row_layout() );
           ?>
             <?php get_template_part( 'templates/sections/' . $sectionLayout ); ?>
           <?php endwhile; ?>

@@ -239,11 +239,11 @@
         }
         .btn-fill-round-2 {
           display: block;
-          border: 1px solid $grey-blue;
+          border: 1px solid $soft-blue;
           padding: 14px 64px 14px 21px;
           text-align: left;
           border-radius: 25px;
-          background: $grey-blue;
+          background: $soft-blue;
           color: $primary;
           transition: all .3s ease;
           @include media-breakpoint-up(lg) {

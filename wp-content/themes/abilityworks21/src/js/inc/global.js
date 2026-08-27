@@ -68,16 +68,11 @@ jQuery($ => {
   .on('click', '.more-less-link a', e => {
     let $a = $(e.currentTarget), isMore = $a.html()=='READ MORE',
       $more_less = $a.parents('.more-less'),
-      $parentCarousel = $more_less.parents('.slides'),
       $ct = $more_less.find('.more-less-content');
 
     $a.html( isMore ? 'CLICK TO CLOSE' : 'READ MORE' ).toggleClass('less');
 
-    $ct.slideToggle(600, () => {
-      if ( $parentCarousel.length > 0 ) {
-        $parentCarousel.slick('setPosition');
-      }
-    });
+    $ct.slideToggle(600);
   })
   .on('click', '.image-video-play', e => {
     let $a = $(e.currentTarget), width = $a.width(), height = $a.height(), videoSrc = $a.attr('rel');
@@ -160,51 +155,9 @@ jQuery($ => {
   onWindowScroll();
   $win.on('scroll', onWindowScroll);
 
-  // footer
+  // footer logos — static wrap
   let $logosSlider = $('#logos-slider');
   if ( $logosSlider.length > 0 ) {
-    $logosSlider.imagesLoaded(() => {
-      $logosSlider.slick({
-        adaptiveHeight: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 800,
-        infinite: true,
-        variableWidth: true,
-        slidesToScroll: 1,
-        centerMode: false,
-        dots: false,
-        arrows: false,
-        appendArrows: '.logos-carousel-arrows',
-        prevArrow: '<button type="button" class="slick-prev icon-caret-left-circle"></button>',
-        nextArrow: '<button type="button" class="slick-next icon-caret-right-circle"></button>',
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              autoplay: true,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1,
-              arrows: true,
-            }
-          },
-        ]
-      })
-    })
+    $logosSlider.addClass('logos-static');
   }
-  // $('.faq-carousel').slick({
-  //   adaptiveHeight: false,
-  //   autoplay: false,
-  //   autoplaySpeed: 7000,
-  //   infinite: true,
-  //   dots: false,
-  //   arrows: true,
-  //   appendArrows: '.faq-carousel-arrows',
-  //   prevArrow: '<button type="button" class="slick-prev icon-caret-left"></button>',
-  //   nextArrow: '<button type="button" class="slick-next icon-caret-right"></button>',
-  // })
-  // .on('beforeChange', () => {
-  //   $('.faq-carousel .faq .a').slideUp();
-  // })
 })
