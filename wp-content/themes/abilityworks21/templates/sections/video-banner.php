@@ -5,7 +5,7 @@ $text_color = get_sub_field('text_color');
 $mob_use_image = get_sub_field('mob_use_image');
 ?>
 <section <?php AW_Helpers::SectionAttrs('video-banner', $mob_use_image ? 'mob-bg-img' : ''); ?>>
-  <video autoplay muted loop id="video-banner">
+  <video muted loop playsinline id="video-banner" preload="metadata">
     <source src="<?php the_sub_field('mp4_url'); ?>" type="video/mp4">
   </video>
 

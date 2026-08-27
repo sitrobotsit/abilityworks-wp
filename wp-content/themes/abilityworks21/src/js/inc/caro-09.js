@@ -35,7 +35,7 @@ jQuery($ => {
         {
           breakpoint: 1024,
           settings: {
-            autoplay: true,
+            autoplay: false,
           }
         }
       ]

@@ -17,12 +17,14 @@ jQuery($ => {
     fixButton()
     $win.on('resize', fixButton);
 
-    $('#btn-video-banner').show().addClass('icon-pause-circle')
-    // video.addEventListener('loadeddata', e => {
-    //   if ( video.readyState >= 3 ) {
-    //     $('#btn-video-banner').show().addClass('icon-pause-circle')
-    //   }
-    // });
+    if ( video ) {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    $('#btn-video-banner').show()
+      .removeClass('icon-pause-circle')
+      .addClass('icon-play-circle');
 
     $btnPlay.on('click', e => {
       if ( video.paused ) {

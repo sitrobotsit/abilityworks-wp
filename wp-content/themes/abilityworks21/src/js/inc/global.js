@@ -164,7 +164,7 @@ jQuery($ => {
       }
       $logosSlider.slick({
         adaptiveHeight: false,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 5000,
         speed: 800,
         infinite: true,
@@ -180,7 +180,7 @@ jQuery($ => {
           {
             breakpoint: 768,
             settings: {
-              autoplay: true,
+              autoplay: false,
               centerMode: true,
               centerPadding: '40px',
               slidesToShow: 1,
