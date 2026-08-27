@@ -211,6 +211,17 @@ class AbilityWorks
     global $current_user;
 
     $assets_version = get_field('ca_assets_version', 'option');
+    if ( empty( $assets_version ) ) {
+      $assets_version = '1.0';
+    }
+    // Bust caches when built assets change
+    $css_path = get_template_directory() . '/css/style.min.css';
+    $js_path = get_template_directory() . '/js/script.min.js';
+    if ( file_exists( $css_path ) ) {
+      $assets_version .= '.' . filemtime( $css_path );
+    } elseif ( file_exists( $js_path ) ) {
+      $assets_version .= '.' . filemtime( $js_path );
+    }
 
     wp_enqueue_style('aw-css', $this->templateURL . '/css/style.min.css', array(), $assets_version);
     wp_enqueue_style('aw-editor-style', $this->templateURL . '/editor-style.css', array(), $assets_version);

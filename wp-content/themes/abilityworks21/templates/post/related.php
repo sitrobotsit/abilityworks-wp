@@ -1,15 +1,45 @@
 <?php
 /**
  * Related articles on single posts (formerly CARO 21).
- * Uses the manually chosen ACF relationship field; shows the first two.
+ * Prefer manually chosen ACF related posts; otherwise two latest posts sharing a tag.
  */
-$related_articles = get_field('post_related_articles');
-if ( empty( $related_articles ) || ! is_array( $related_articles ) ) {
-  return;
+$related_ids = [];
+
+$related_articles = get_field( 'post_related_articles' );
+if ( ! empty( $related_articles ) && is_array( $related_articles ) ) {
+  $related_ids = array_values( array_filter( array_map( 'intval', $related_articles ) ) );
 }
 
-$related_ids = array_map( 'intval', $related_articles );
-$related_ids = array_values( array_filter( $related_ids ) );
+if ( empty( $related_ids ) ) {
+  $tag_ids = wp_get_post_tags( get_the_ID(), [ 'fields' => 'ids' ] );
+  if ( ! empty( $tag_ids ) ) {
+    $fallback_query = new WP_Query([
+      'post_type' => 'post',
+      'post_status' => 'publish',
+      'posts_per_page' => 2,
+      'post__not_in' => [ get_the_ID() ],
+      'tag__in' => $tag_ids,
+      'ignore_sticky_posts' => true,
+      'fields' => 'ids',
+    ]);
+    $related_ids = $fallback_query->posts;
+    wp_reset_postdata();
+  }
+}
+
+if ( empty( $related_ids ) ) {
+  $fallback_query = new WP_Query([
+    'post_type' => 'post',
+    'post_status' => 'publish',
+    'posts_per_page' => 2,
+    'post__not_in' => [ get_the_ID() ],
+    'ignore_sticky_posts' => true,
+    'fields' => 'ids',
+  ]);
+  $related_ids = $fallback_query->posts;
+  wp_reset_postdata();
+}
+
 if ( empty( $related_ids ) ) {
   return;
 }

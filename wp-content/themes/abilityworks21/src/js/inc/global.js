@@ -155,9 +155,37 @@ jQuery($ => {
   onWindowScroll();
   $win.on('scroll', onWindowScroll);
 
-  // footer logos — static wrap
+  // footer logos carousel
   let $logosSlider = $('#logos-slider');
   if ( $logosSlider.length > 0 ) {
-    $logosSlider.addClass('logos-static');
+    $logosSlider.imagesLoaded(() => {
+      $logosSlider.slick({
+        adaptiveHeight: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 800,
+        infinite: true,
+        variableWidth: true,
+        slidesToScroll: 1,
+        centerMode: false,
+        dots: false,
+        arrows: false,
+        appendArrows: '.logos-carousel-arrows',
+        prevArrow: '<button type="button" class="slick-prev icon-caret-left-circle"></button>',
+        nextArrow: '<button type="button" class="slick-next icon-caret-right-circle"></button>',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              autoplay: true,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1,
+              arrows: true,
+            }
+          },
+        ]
+      })
+    })
   }
 })
