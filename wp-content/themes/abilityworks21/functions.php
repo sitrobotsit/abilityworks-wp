@@ -214,13 +214,18 @@ class AbilityWorks
     if ( empty( $assets_version ) ) {
       $assets_version = '1.0';
     }
-    // Bust caches when built assets change
+    // Always bust caches when built assets change (staging was stuck on old ver=)
     $css_path = get_template_directory() . '/css/style.min.css';
     $js_path = get_template_directory() . '/js/script.min.js';
+    $mtime = 0;
     if ( file_exists( $css_path ) ) {
-      $assets_version .= '.' . filemtime( $css_path );
-    } elseif ( file_exists( $js_path ) ) {
-      $assets_version .= '.' . filemtime( $js_path );
+      $mtime = max( $mtime, (int) filemtime( $css_path ) );
+    }
+    if ( file_exists( $js_path ) ) {
+      $mtime = max( $mtime, (int) filemtime( $js_path ) );
+    }
+    if ( $mtime ) {
+      $assets_version = $assets_version . '.' . $mtime;
     }
 
     wp_enqueue_style('aw-css', $this->templateURL . '/css/style.min.css', array(), $assets_version);

@@ -23,3 +23,11 @@ Text Domain: aw
 .skip-link:focus {right: auto;}
 
 .st-caro-19 .slides-controls button:before {font-size: unset !important;}
+
+/* Logo size fallback if carousel CSS/JS is stale */
+#footer .footer-logos .logos-slider .item img {
+  max-width: 168px;
+  max-height: 52px;
+  width: auto;
+  height: auto;
+}

@@ -1,7 +1,8 @@
 .articles-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -8px;
+  align-items: stretch;
+  margin: 0 -7px;
 
   @include media-breakpoint-up(lg) {
     margin: 0 -17px;
@@ -9,20 +10,32 @@
 
   > .loop-post,
   > .card {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 100%;
     max-width: 100%;
-    margin: 0 0 16px;
-    padding: 0 8px;
     box-sizing: border-box;
+    background: $off-white;
+    border-radius: $border-radius;
+    padding: 15px 15px 25px;
+    margin: 0 7px 16px;
 
     @include media-breakpoint-up(md) {
-      flex: 1 1 50%;
-      max-width: 50%;
+      flex: 1 1 calc(50% - 14px);
+      max-width: calc(50% - 14px);
+      padding: 23px 23px 35px;
       margin-bottom: 24px;
     }
 
     @include media-breakpoint-up(lg) {
-      padding: 0 17px;
+      flex: 1 1 calc(50% - 34px);
+      max-width: calc(50% - 34px);
+      margin-left: 17px;
+      margin-right: 17px;
+    }
+
+    .more {
+      margin-top: auto;
     }
   }
 }
@@ -143,17 +156,6 @@
       text-align: left;
     }
   }
-
-  .loop-post {
-    background: $off-white;
-    border-radius: $border-radius;
-    padding: 15px 15px 25px;
-    height: 100%;
-
-    @include media-breakpoint-up(md) {
-      padding: 23px 23px 35px;
-    }
-  }
 }
 
 $intro-box-margin-right: 215px;
@@ -252,21 +254,19 @@ $intro-box-margin-right: 215px;
   .articles-grid {
     @include media-breakpoint-up(lg) {
       width: calc(50% + #{$intro-box-margin-right} - 30px);
-      margin: 0;
+      margin: 0 -7px;
     }
 
     > .loop-post {
-      background: $off-white;
-      border-radius: $border-radius;
-      padding: 15px 15px 30px;
-
       @include media-breakpoint-up(md) {
         padding: 23px 23px 40px;
       }
 
       @include media-breakpoint-up(lg) {
-        flex: 1 1 50%;
-        max-width: 50%;
+        flex: 1 1 calc(50% - 14px);
+        max-width: calc(50% - 14px);
+        margin-left: 7px;
+        margin-right: 7px;
       }
     }
   }
@@ -279,70 +279,7 @@ $intro-box-margin-right: 215px;
 }
 
 .st-related-articles {
-  .headline {
-    margin-bottom: 20px;
-
-    @include media-breakpoint-up(lg) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 45px;
-    }
-
-    .st-title {
-      text-align: center;
-      font-size: 32px;
-      line-height: 1.1875;
-      padding: 0 50px;
-      margin: 0;
-
-      @include media-breakpoint-up(lg) {
-        font-size: 40px;
-        line-height: 1.2;
-        padding: 0;
-        text-align: left;
-      }
-    }
-
-    a {
-      display: none;
-      font-family: $font-family-fsme-bold;
-      font-size: 18px;
-      text-decoration: underline;
-      color: $gray-800;
-
-      @include media-breakpoint-up(lg) {
-        display: block;
-      }
-    }
-  }
-
-  .footline {
-    text-align: center;
-    padding-top: 27px;
-
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
-
-    a {
-      font-family: $font-family-fsme-bold;
-      font-size: 18px;
-      text-decoration: underline;
-      color: $gray-800;
-    }
-  }
-
-  .loop-post {
-    background: $off-white;
-    border-radius: $border-radius;
-    padding: 15px 15px 25px;
-    height: 100%;
-
-    @include media-breakpoint-up(md) {
-      padding: 23px 23px 35px;
-    }
-  }
+  // Card box styles live in _caro-21.scss (shared with .st-caro-21)
 }
 
 .st-manual-cards {

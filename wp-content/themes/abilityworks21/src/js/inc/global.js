@@ -158,7 +158,10 @@ jQuery($ => {
   // footer logos carousel
   let $logosSlider = $('#logos-slider');
   if ( $logosSlider.length > 0 ) {
-    $logosSlider.imagesLoaded(() => {
+    let initLogosCarousel = () => {
+      if ( $logosSlider.hasClass('slick-initialized') ) {
+        return;
+      }
       $logosSlider.slick({
         adaptiveHeight: false,
         autoplay: true,
@@ -185,7 +188,15 @@ jQuery($ => {
             }
           },
         ]
-      })
-    })
+      });
+    };
+
+    if ( typeof $logosSlider.imagesLoaded === 'function' ) {
+      $logosSlider.imagesLoaded().always(initLogosCarousel);
+    } else {
+      initLogosCarousel();
+    }
+    // Fallback if image load events never settle
+    setTimeout(initLogosCarousel, 1500);
   }
 })

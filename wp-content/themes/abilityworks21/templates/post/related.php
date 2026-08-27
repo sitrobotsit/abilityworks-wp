@@ -74,22 +74,24 @@ get_template_part( 'templates/sections/spacer', null, [
 $page_for_posts = get_option( 'page_for_posts' );
 $page_for_posts_url = $page_for_posts ? get_permalink( $page_for_posts ) : home_url( '/' );
 ?>
-<section class="st-related-articles">
+<section class="st-caro-21 st-related-articles" data-slides="2">
   <div class="container">
     <div class="headline">
       <h2 class="st-title">Other recent articles</h2>
       <a href="<?php echo esc_url( $page_for_posts_url ); ?>">See all articles</a>
     </div>
 
-    <div class="articles-grid">
-      <?php
-        while ( $query->have_posts() ) :
-          $query->the_post();
-      ?>
-        <article class="loop-post">
-          <?php get_template_part( 'templates/loop', 'post' ); ?>
-        </article>
-      <?php endwhile; ?>
+    <div class="slides-wrapper">
+      <div class="slides">
+        <?php
+          while ( $query->have_posts() ) :
+            $query->the_post();
+        ?>
+          <div class="loop-post slide">
+            <?php get_template_part( 'templates/loop', 'post' ); ?>
+          </div>
+        <?php endwhile; ?>
+      </div>
     </div>
 
     <div class="footline">
