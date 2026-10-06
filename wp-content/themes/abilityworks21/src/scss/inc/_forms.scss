@@ -57,46 +57,47 @@
 }
 
 .form-contact {
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  // GOV.UK: don't let text inputs fill a wide container — size them
+  // for the content. Two-thirds / ~40rem is their fluid width for
+  // names and emails; 100% below that so it still fits small screens.
+  // https://design-system.service.gov.uk/components/text-input/
+  max-width: 40rem;
+  width: 100%;
+
   .contact-details {
     margin-bottom: 20px;
-    @include media-breakpoint-up(lg) {
-      width: 65.641%;
-      margin-right: 30px;
-      margin-bottom: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      .form-group {
-        width: calc(50% - 15px);
-      }
+
+    .form-group {
+      width: 100%;
     }
   }
   .contact-message {
     margin-bottom: 20px;
-    @include media-breakpoint-up(lg) {
-      flex: 1;
-      textarea {
-        height: 121px;
-      }
+
+    textarea {
+      min-height: 160px;
     }
   }
   .btn-wrapper {
     position: relative;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    @include media-breakpoint-up(lg) {
-      width: 100%;
-      justify-content: flex-start;
+    justify-content: flex-end;
+
+    p {
+      position: relative;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
+
+    .wpcf7-spinner,
     .ajax-loader {
       position: absolute;
-      transform: translateX(-70px);
+      right: calc(100% + 8px);
+      top: 50%;
+      margin: 0;
+      transform: translateY(-50%);
     }
   }
 }
