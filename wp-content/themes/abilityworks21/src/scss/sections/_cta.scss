@@ -39,14 +39,12 @@
   }
   .title {
     font-size: 25px;
-    line-height: 1.15;
     margin-bottom: 20px;
     padding: 0 22px;
     font-weight: $font-weight-bold;
     @include media-breakpoint-up(md) {
       width: 100%;
       font-size: 40px;
-      line-height: 1.2;
       padding: 0 15px;
       margin-bottom: 30px;
     }

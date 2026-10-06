@@ -1,7 +1,5 @@
-.st-latest {
-  .wrap {
-    @include media-breakpoint-up(md) {
-      width: 570px;
+.st-latest {  .wrap {    @include media-breakpoint-up(md) {
+  width: 570px;
       margin: 0 auto;
     }
     // @include media-breakpoint-up(xl) {
@@ -21,18 +19,13 @@
       padding: 0;
     }
   }
-  .the-grid {
-    @include media-breakpoint-up(xl) {
-      display: flex;
+  .the-grid {    @include media-breakpoint-up(xl) {
+    display: flex;
       flex-direction: column-reverse;
       align-items: stretch;
     }
-    .grid-row {
-      @include media-breakpoint-up(md) {
-        &:last-child {
-          .grid-col {
-            &:last-child {
-              margin-bottom: 0;
+    .grid-row {      @include media-breakpoint-up(md) {        &:last-child {          .grid-col {            &:last-child {
+      margin-bottom: 0;
             }
           }
         }
@@ -43,15 +36,14 @@
         margin-left: -15px;
         margin-right: -15px;
         &:first-child {
-        }
+          }
         &:last-child {
           flex-direction: row-reverse;
           margin-bottom: 30px;
         }
       }
-      .grid-col {
-        @include media-breakpoint-up(md) {
-          margin-bottom: 30px;
+      .grid-col {        @include media-breakpoint-up(md) {
+        margin-bottom: 30px;
         }
         @include media-breakpoint-up(xl) {
           flex: 1;
@@ -79,14 +71,12 @@
       color: $soft-blue;
     }
   }
-  .newsroom-carousel {
-    @include media-breakpoint-up(md) {
-      margin-left: -15px;
+  .newsroom-carousel {    @include media-breakpoint-up(md) {
+    margin-left: -15px;
       margin-right: -15px;
     }
-    .item {
-      @include media-breakpoint-up(md) {
-        padding: 0 15px;
+    .item {      @include media-breakpoint-up(md) {
+      padding: 0 15px;
       }
       .post-image {
         display: block;
@@ -95,9 +85,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        &:first-child {
-          @include media-breakpoint-up(md) {
-            display: none;
+        &:first-child {          @include media-breakpoint-up(md) {
+          display: none;
           }
         }
         &:last-child {
@@ -150,7 +139,6 @@
         h4 {
           font-family: $font-family-fsme-bold;
           font-size: 20px;
-          line-height: 1.2;
           margin: 0 0 16px;
           @include media-breakpoint-up(md) {
             max-height: 72px;
@@ -194,14 +182,12 @@
       }
     }
   }
-  .social-carousel {
-    @include media-breakpoint-up(md) {
-      margin-left: -15px;
+  .social-carousel {    @include media-breakpoint-up(md) {
+    margin-left: -15px;
       margin-right: -15px;
     }
-    .item {
-      @include media-breakpoint-up(md) {
-        padding: 0 15px;
+    .item {      @include media-breakpoint-up(md) {
+      padding: 0 15px;
       }
       .item-image {
         display: block;
@@ -210,9 +196,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        &:first-child {
-          @include media-breakpoint-up(md) {
-            display: none;
+        &:first-child {          @include media-breakpoint-up(md) {
+          display: none;
           }
         }
         &:last-child {
@@ -287,10 +272,8 @@
       }
     }
   }
-  .testimonial-carousel {
-    .item {
-      @include media-breakpoint-up(md) {
-        display: flex;
+  .testimonial-carousel {    .item {      @include media-breakpoint-up(md) {
+    display: flex;
         flex-direction: row-reverse;
         height: 320px;
       }
@@ -315,9 +298,8 @@
           border-radius: $border-radius 0 0 $border-radius;
           padding: 22px 20px 75px 21px;
         }
-        .inn {
-          @include media-breakpoint-up(md) {
-            height: 223px;
+        .inn {          @include media-breakpoint-up(md) {
+          height: 223px;
             overflow-y: hidden;
           }
         }

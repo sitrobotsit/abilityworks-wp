@@ -1,6 +1,5 @@
-.st-check-list {
-  .headline {
-    margin-bottom: 25px;
+.st-check-list {  .headline {
+  margin-bottom: 25px;
     @include media-breakpoint-up(md) {
       display: flex;
       justify-content: space-between;
@@ -10,14 +9,12 @@
     h2 {
       text-align: center;
       font-size: 32px;
-      line-height: 1.1;
       margin: 0;
       @include media-breakpoint-up(md) {
         font-size: 36px;
       }
       @include media-breakpoint-up(lg) {
         font-size: 40px;
-        line-height: 1.2;
       }
     }
     .btn {
@@ -37,23 +34,20 @@
       display: flex;
       flex-wrap: wrap;
       margin: 0 -17px;
-      &.ttl-1 {
-        li {
-          width: 100%;
+      &.ttl-1 {        li {
+        width: 100%;
         }
       }
-      &.ttl-2 {
-        li {
-          width: 50%;
+      &.ttl-2 {        li {
+        width: 50%;
           a {
             align-items: flex-start;
             height: auto;
           }
         }
       }
-      &.ttl-3 {
-        li {
-          width: 50%;
+      &.ttl-3 {        li {
+        width: 50%;
           // &:nth-child(2) {
           //   margin-bottom: 0;
           // }
@@ -63,10 +57,8 @@
         }
       }
     }
-    &.more-3 {
-      li {
-        @include media-breakpoint-up(md) {
-          width: 50%;
+    &.more-3 {      li {        @include media-breakpoint-up(md) {
+      width: 50%;
         }
         @include media-breakpoint-up(lg) {
           width: 33.3333%;
@@ -82,9 +74,8 @@
         font-size: 22px;
         margin-bottom: 25px;
       }
-      &:last-child {
-        @include media-breakpoint-down(sm) {
-          margin-bottom: 0;
+      &:last-child {        @include media-breakpoint-down(sm) {
+        margin-bottom: 0;
         }
       }
       a {

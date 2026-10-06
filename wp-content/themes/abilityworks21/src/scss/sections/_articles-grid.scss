@@ -51,9 +51,8 @@
     padding-top: 37px;
   }
 
-  &.form-revealed {
-    .sform {
-      display: flex;
+  &.form-revealed {    .sform {
+    display: flex;
     }
 
     .btn-search {
@@ -140,17 +139,14 @@
   }
 }
 
-.st-articles-latest {
-  .st-title {
-    text-align: center;
+.st-articles-latest {  .st-title {
+  text-align: center;
     font-size: 32px;
-    line-height: 1.1875;
     padding: 0 20px;
     margin: 0 0 20px;
 
     @include media-breakpoint-up(lg) {
       font-size: 40px;
-      line-height: 1.2;
       margin: 0 0 35px;
       padding: 0;
       text-align: left;
@@ -160,10 +156,8 @@
 
 $intro-box-margin-right: 215px;
 
-.st-articles-by-tag {
-  .wrap {
-    @include media-breakpoint-up(lg) {
-      display: flex;
+.st-articles-by-tag {  .wrap {    @include media-breakpoint-up(lg) {
+  display: flex;
       justify-content: space-between;
     }
   }
@@ -176,9 +170,8 @@ $intro-box-margin-right: 215px;
       margin-bottom: 0;
     }
 
-    .title {
-      @include media-breakpoint-up(lg) {
-        display: flex;
+    .title {      @include media-breakpoint-up(lg) {
+      display: flex;
       }
 
       .bar {
@@ -191,7 +184,6 @@ $intro-box-margin-right: 215px;
 
       .titlebar {
         font-size: 20px;
-        line-height: 1.1;
         margin: 0;
         padding: 18px;
 
@@ -251,15 +243,13 @@ $intro-box-margin-right: 215px;
     }
   }
 
-  .articles-grid {
-    @include media-breakpoint-up(lg) {
-      width: calc(50% + #{$intro-box-margin-right} - 30px);
+  .articles-grid {    @include media-breakpoint-up(lg) {
+    width: calc(50% + #{$intro-box-margin-right} - 30px);
       margin: 0 -7px;
     }
 
-    > .loop-post {
-      @include media-breakpoint-up(md) {
-        padding: 23px 23px 40px;
+    > .loop-post {      @include media-breakpoint-up(md) {
+      padding: 23px 23px 40px;
       }
 
       @include media-breakpoint-up(lg) {
@@ -271,9 +261,8 @@ $intro-box-margin-right: 215px;
     }
   }
 
-  .articles-search {
-    @include media-breakpoint-up(lg) {
-      justify-content: flex-end;
+  .articles-search {    @include media-breakpoint-up(lg) {
+    justify-content: flex-end;
     }
   }
 }
@@ -282,9 +271,8 @@ $intro-box-margin-right: 215px;
   // Card box styles live in _caro-21.scss (shared with .st-caro-21)
 }
 
-.st-manual-cards {
-  .cards-grid {
-    display: flex;
+.st-manual-cards {  .cards-grid {
+  display: flex;
     flex-wrap: wrap;
     margin: 0 -8px;
 
@@ -332,13 +320,11 @@ $intro-box-margin-right: 215px;
 
     .title {
       font-size: 18px;
-      line-height: 1.167;
       margin: 0 0 10px;
 
       @include media-breakpoint-up(md) {
         margin-bottom: 33px;
         font-size: 22px;
-        line-height: 1.1818;
       }
     }
 

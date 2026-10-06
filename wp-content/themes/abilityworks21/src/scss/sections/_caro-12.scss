@@ -1,8 +1,6 @@
 $intro-box-margin-right: 215px;
-.st-caro-12 {
-  .wrap {
-    @include media-breakpoint-up(lg) {
-      display: flex;
+.st-caro-12 {  .wrap {    @include media-breakpoint-up(lg) {
+  display: flex;
       justify-content: space-between;
     }
   }
@@ -12,9 +10,8 @@ $intro-box-margin-right: 215px;
       width: calc(50% - #{$intro-box-margin-right});
       margin-bottom: 0;
     }
-    .title {
-      @include media-breakpoint-up(lg) {
-        display: flex;
+    .title {      @include media-breakpoint-up(lg) {
+      display: flex;
       }
       .bar {
         background: $primary;
@@ -24,7 +21,6 @@ $intro-box-margin-right: 215px;
       }
       .titlebar {
         font-size: 20px;
-        line-height: 1.1;
         margin: 0;
         padding: 18px;
         @include media-breakpoint-up(md) {
@@ -72,9 +68,8 @@ $intro-box-margin-right: 215px;
       }
     }
   }
-  .slides-wrapper {
-    @include media-breakpoint-up(lg) {
-      width: calc(50% + #{$intro-box-margin-right} - 30px);
+  .slides-wrapper {    @include media-breakpoint-up(lg) {
+    width: calc(50% + #{$intro-box-margin-right} - 30px);
     }
     .slides {
       width: 250px;
@@ -149,18 +144,15 @@ $intro-box-margin-right: 215px;
         }
         .title {
           font-size: 18px;
-          line-height: 1.1;
           margin: 0;
           @include media-breakpoint-up(md) {
             text-align: center;
             font-size: 22px;
-            line-height: 1.15;
           }
         }
       }
-      .desc {
-        @include media-breakpoint-up(md) {
-          text-align: center;
+      .desc {        @include media-breakpoint-up(md) {
+        text-align: center;
         }
       }
     }

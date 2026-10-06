@@ -2,9 +2,8 @@
   // @include media-breakpoint-up(lg) {
   //   padding-top: 38px;
   // }
-  .wrap {
-    @include media-breakpoint-up(lg) {
-      max-width: $container-lg;
+  .wrap {    @include media-breakpoint-up(lg) {
+    max-width: $container-lg;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -13,9 +12,8 @@
       max-width: $container-xl;
     }
   }
-  .photo {
-    @include media-breakpoint-up(lg) {
-      width: 31.624%;
+  .photo {    @include media-breakpoint-up(lg) {
+    width: 31.624%;
     }
     img {
       width: 100%;
@@ -41,7 +39,6 @@
       @include media-breakpoint-up(lg) {
         display: block;
         font-size: 56px;
-        line-height: 1.1428;
         margin: 0 0 33px;
       }
       span {

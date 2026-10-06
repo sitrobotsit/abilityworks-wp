@@ -18,9 +18,8 @@
       padding: 0 50px;
     }
   }
-  &.search-open {
-    .logo {
-      display: none;
+  &.search-open {    .logo {
+    display: none;
       @include media-breakpoint-up(xl) {
         display: block;
       }
@@ -33,9 +32,8 @@
         padding-right: 0;
       }
     }
-    .mob-items {
-      .icon-search {
-        background: $primary;
+    .mob-items {      .icon-search {
+      background: $primary;
         color: $white;
       }
       .icon-phone {
@@ -45,13 +43,11 @@
         margin-left: 15px;
       }
     }
-    .main-nav {
-      .main-menu {
-        display: none;
+    .main-nav {      .main-menu {
+      display: none;
       }
-      .btns {
-        .toggle-search {
-          display: none;
+      .btns {        .toggle-search {
+        display: none;
         }
       }
     }
@@ -85,9 +81,8 @@
     display: none;
     padding-right: 7px;
     transition: all .3s ease;
-    @include media-breakpoint-up(xl) {
-      form {
-        position: relative;
+    @include media-breakpoint-up(xl) {      form {
+      position: relative;
         button {
           display: block;
           position: absolute;
@@ -230,9 +225,8 @@
             cursor: pointer;
             position: relative;
             padding-right: 15px;
-            &:hover {
-              >a {
-                color: $soft-blue;
+            &:hover {              >a {
+              color: $soft-blue;
               }
               &:before {
                 color: $soft-blue;
@@ -255,9 +249,8 @@
               transition: all .3s ease;
             }
           }
-          &.current-menu-item, &.current-menu-parent {
-            >a {
-              text-decoration: underline;
+          &.current-menu-item, &.current-menu-parent {            >a {
+            text-decoration: underline;
             }
           }
           >a {
@@ -309,9 +302,8 @@
             &:last-child {
               margin-bottom: 0;
             }
-            &.current-menu-item {
-              a {
-                text-decoration: underline;
+            &.current-menu-item {              a {
+              text-decoration: underline;
               }
             }
             a {
@@ -338,9 +330,8 @@
         &:first-child {
           margin-left: 0;
         }
-        .btn-outline-dark {
-          &:hover {
-            background: $primary;
+        .btn-outline-dark {          &:hover {
+          background: $primary;
             border-color: $primary;
           }
         }
@@ -380,12 +371,10 @@
   h2.title {
     text-align: center;
     font-size: 30px;
-    line-height: 1.1667;
     margin: 0 0 40px;
   }
-  .main-menu {
-    .menu {
-      list-style-type: none;
+  .main-menu {    .menu {
+    list-style-type: none;
       margin: 0 0 20px;
       padding: 0;
       display: flex;
@@ -410,9 +399,8 @@
         vertical-align: middle;
         margin-left: 5px;
         position: relative;
-        &.rotated {
-          &:before {
-            transform: rotate(180deg);
+        &.rotated {          &:before {
+          transform: rotate(180deg);
           }
         }
         &:before {
@@ -442,9 +430,8 @@
     padding: 0;
     text-align: center;
   }
-  footer {
-    .social-icons {
-      display: flex;
+  footer {    .social-icons {
+    display: flex;
       justify-content: center;
       align-items: center;
       font-size: 27px;
@@ -470,14 +457,11 @@
     height: auto;
     overflow: auto;
   }
-  #header {
-    .mob-items {
-      .icon-search {
-        display: block;
+  #header {    .mob-items {      .icon-search {
+    display: block;
       }
-      .menubar {
-        &:before {
-          transform: translate(-50%, 11px) rotate(45deg);
+      .menubar {        &:before {
+        transform: translate(-50%, 11px) rotate(45deg);
         }
         &:after {
           transform: translate(-50%, -11px) rotate(-45deg);
@@ -489,7 +473,7 @@
     }
   }
   #main, #footer {
-  }
+    }
   #mob-nav {
     display: block;
     @include media-breakpoint-up(xl) {
@@ -498,17 +482,14 @@
   }
 }
 
-.header-trans-light {
-  @include media-breakpoint-up(xl) {
-    #header {
-      background: transparent;
+.header-trans-light {  @include media-breakpoint-up(xl) {    #header {
+  background: transparent;
       box-shadow: none;
       .inn {
         height: 136px;
       }
-      .logo {
-        @include media-breakpoint-up(xl) {
-          max-width: 280px;
+      .logo {        @include media-breakpoint-up(xl) {
+        max-width: 280px;
         }
         .logo-dark {
           display: none;
@@ -517,9 +498,8 @@
           display: block;
         }
       }
-      .form-search {
-        .form-control {
-          color: $white;
+      .form-search {        .form-control {
+        color: $white;
           border-color: $white;
           &::placeholder {
             color: $white;
@@ -529,12 +509,8 @@
           color: $white;
         }
       }
-      .main-nav {
-        .main-menu {
-          .menu {
-            >li {
-              &.menu-item-has-children {
-                color: $white;
+      .main-nav {        .main-menu {          .menu {            >li {              &.menu-item-has-children {
+        color: $white;
               }
               >a {
                 color: $white;
@@ -545,10 +521,8 @@
             }
           }
         }
-        .btns {
-          li {
-            .toggle-search {
-              color: $white;
+        .btns {          li {            .toggle-search {
+          color: $white;
               &:hover {
                 color: $soft-blue;
               }
@@ -571,17 +545,14 @@
     }
   }
 }
-.header-scrolled {
-  @include media-breakpoint-up(xl) {
-    #header {
-      background: $off-white;
+.header-scrolled {  @include media-breakpoint-up(xl) {    #header {
+  background: $off-white;
       box-shadow: 0 2px 4px 0 rgba($black, 0.08);
       .inn {
         height: 86px;
       }
-      .logo {
-        @include media-breakpoint-up(xl) {
-          max-width: 210px;
+      .logo {        @include media-breakpoint-up(xl) {
+        max-width: 210px;
         }
         .logo-dark {
           display: block;
@@ -590,9 +561,8 @@
           display: none;
         }
       }
-      .form-search {
-        .form-control {
-          color: $gray-800;
+      .form-search {        .form-control {
+        color: $gray-800;
           border-color: $gray-800;
           &::placeholder {
             color: $gray-800;
@@ -602,12 +572,8 @@
           color: $gray-800;
         }
       }
-      .main-nav {
-        .main-menu {
-          .menu {
-            >li {
-              &.menu-item-has-children {
-                color: $gray-800;
+      .main-nav {        .main-menu {          .menu {            >li {              &.menu-item-has-children {
+        color: $gray-800;
               }
               >a {
                 color: $gray-800;
@@ -618,10 +584,8 @@
             }
           }
         }
-        .btns {
-          li {
-            .toggle-search {
-              color: $gray-800;
+        .btns {          li {            .toggle-search {
+          color: $gray-800;
               &:hover {
                 color: $soft-blue;
               }

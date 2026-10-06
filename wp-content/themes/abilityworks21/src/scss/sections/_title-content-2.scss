@@ -2,9 +2,8 @@
   background: $primary;
   color: $white;
   padding: 60px 0;
-  .inn {
-    @include media-breakpoint-up(lg) {
-      display: flex;
+  .inn {    @include media-breakpoint-up(lg) {
+    display: flex;
       justify-content: space-between;
     }
   }
@@ -22,11 +21,9 @@
     h2.title {
       font-size: 30px;
       font-weight: $font-weight-bold;
-      line-height: 1.167;
       margin: 0;
       @include media-breakpoint-up(md) {
         font-size: 40px;
-        line-height: 1.125;
       }
     }
     .subtitle {

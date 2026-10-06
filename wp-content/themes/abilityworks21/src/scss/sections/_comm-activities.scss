@@ -8,9 +8,8 @@
     padding-top: 70px;
     padding-bottom: 30px;
   }
-  .inn {
-    @include media-breakpoint-up(md) {
-      display: flex;
+  .inn {    @include media-breakpoint-up(md) {
+    display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       margin-left: -16px;
@@ -33,9 +32,8 @@
       .thumb {
         display: block;
         margin-bottom: 20px;
-        &:hover {
-          img {
-            transform: scale(1.1194);
+        &:hover {          img {
+          transform: scale(1.1194);
           }
         }
         img {
@@ -47,7 +45,6 @@
       h3 {
         font-size: 25px;
         font-weight: $font-weight-bold;
-        line-height: 1.12;
         margin-bottom: 15px;
         a {
           position: relative;

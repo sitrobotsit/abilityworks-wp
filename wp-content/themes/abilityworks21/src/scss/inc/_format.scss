@@ -7,8 +7,12 @@
     }
     a {
       color: $white;
+      &:visited {
+        color: $white;
+      }
       &:hover {
         color: $red;
+        background-color: $link-hover-bg;
       }
     }
   }
@@ -26,10 +30,14 @@
     height: auto !important;
   }
   a {
-    color: inherit;
+    color: $link-color;
     text-decoration: underline;
+    &:visited {
+      color: $link-visited-color;
+    }
     &:hover {
-      color: $blue;
+      color: $link-color;
+      background-color: $link-hover-bg;
     }
   }
   hr {

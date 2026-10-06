@@ -1,13 +1,11 @@
-.st-enquire-buttons {
-  .st-title {
-    text-align: center;
+.st-enquire-buttons {  .st-title {
+  text-align: center;
     padding: 0 10%;
     margin: 0 0 40px;
     @include media-breakpoint-up(lg) {
       padding: 0;
       text-align: left;
       font-size: 40px;
-      line-height: 1.5;
       margin-bottom: 20px;
     }
   }
@@ -20,19 +18,15 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-    &.ttl-1 {
-      li {
-        @include media-breakpoint-up(md) {
-          width: 100%;
+    &.ttl-1 {      li {        @include media-breakpoint-up(md) {
+      width: 100%;
         }
-        h4 {
-          @include media-breakpoint-up(md) {
-            margin: 0;
+        h4 {          @include media-breakpoint-up(md) {
+          margin: 0;
           }
         }
-        .inn {
-          @include media-breakpoint-up(md) {
-            flex: 1;
+        .inn {          @include media-breakpoint-up(md) {
+          flex: 1;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -71,16 +65,14 @@
       }
       h4 {
         font-size: 22px;
-        line-height: 1.2;
         font-family: $font-family-sans-serif;
         margin: 0 0 5px;
         @include media-breakpoint-up(lg) {
           margin: 0;
         }
       }
-      .inn {
-        @include media-breakpoint-up(lg) {
-          flex: 1;
+      .inn {        @include media-breakpoint-up(lg) {
+        flex: 1;
           display: flex;
           justify-content: space-between;
           align-items: center;

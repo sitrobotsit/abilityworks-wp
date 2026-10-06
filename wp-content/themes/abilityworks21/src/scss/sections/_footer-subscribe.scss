@@ -18,7 +18,6 @@
     }
     h3 {
       font-size: 30px;
-      line-height: 35px;
       font-weight: $font-weight-bold;
       color: $primary;
       margin-bottom: 30px;
@@ -32,10 +31,8 @@
       }
     }
   }
-  .form-wrapper {
-    .wpcf7-form {
-      @include media-breakpoint-up(md) {
-        display: flex;
+  .form-wrapper {    .wpcf7-form {      @include media-breakpoint-up(md) {
+    display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         margin-left: -10px;
@@ -46,14 +43,12 @@
         margin-right: -15px;
       }
     }
-    .invalid {
-      .wpcf7-response-output {
-        color: $danger;
+    .invalid {      .wpcf7-response-output {
+      color: $danger;
       }
     }
-    .sent {
-      .form-group, .submit {
-        display: none;
+    .sent {      .form-group, .submit {
+      display: none;
       }
       .wpcf7-response-output {
         color: $gray-800;
@@ -79,9 +74,8 @@
           width: auto;
         }
       }
-      @include media-breakpoint-up(xl) {
-        &.form-group-first_name {
-          width: 298px;
+      @include media-breakpoint-up(xl) {        &.form-group-first_name {
+        width: 298px;
         }
         &.form-group-last_name {
           width: 298px;
@@ -161,9 +155,8 @@
           transform: translateY(-50%);
         }
       }
-      .ajax-loader {
-        @include media-breakpoint-up(md) {
-          position: absolute;
+      .ajax-loader {        @include media-breakpoint-up(md) {
+        position: absolute;
           right: -5px;
           bottom: 15px;
         }

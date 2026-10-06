@@ -13,7 +13,6 @@
   .headline {
     text-align: center;
     font-size: 30px;
-    line-height: 1.167;
     font-weight: $font-weight-bold;
     color: $primary;
     margin: 0 auto 15px;
@@ -23,7 +22,6 @@
       margin: 0;
       max-width: 45%;
       font-size: 40px;
-      line-height: 1.125;
     }
     @include media-breakpoint-up(xl) {
       max-width: 38%;
@@ -126,7 +124,6 @@
           font-weight: $font-weight-bold;
           @include media-breakpoint-up(lg) {
             font-size: 30px;
-            line-height: 1em;
             display: block;
             margin-bottom: 7px;
           }

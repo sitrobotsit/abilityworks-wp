@@ -1,11 +1,9 @@
-.st-story-details {
-  @include media-breakpoint-up(lg) {
-    padding-top: 76px;
+.st-story-details {  @include media-breakpoint-up(lg) {
+  padding-top: 76px;
     padding-bottom: 48px;
   }
-  .inn {
-    @include media-breakpoint-up(lg) {
-      padding: 0 20px;
+  .inn {    @include media-breakpoint-up(lg) {
+    padding: 0 20px;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
@@ -36,13 +34,11 @@
     }
     h1 {
       font-size: 30px;
-      line-height: 1.167;
       font-weight: $font-weight-bold;
       color: $primary;
       margin: 0 0 20px;
       @include media-breakpoint-up(lg) {
         font-size: 40px;
-        line-height: 1.125;
         margin-bottom: 10px;
       }
     }
@@ -82,9 +78,8 @@
       }
     }
   }
-  .images-carousel {
-    @include media-breakpoint-up(lg) {
-      border-radius: 18px;
+  .images-carousel {    @include media-breakpoint-up(lg) {
+    border-radius: 18px;
       overflow: hidden;
       box-shadow: 4px 4px 15px 0 rgba($black, .2);
     }

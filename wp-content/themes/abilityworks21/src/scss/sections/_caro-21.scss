@@ -1,7 +1,6 @@
 .st-caro-21,
-.st-related-articles {
-  .headline {
-    margin-bottom: 20px;
+.st-related-articles {  .headline {
+  margin-bottom: 20px;
     @include media-breakpoint-up(lg) {
       display: flex;
       justify-content: space-between;
@@ -11,12 +10,10 @@
     .st-title {
       text-align: center;
       font-size: 32px;
-      line-height: 1.1875;
       padding: 0 50px;
       margin: 0;
       @include media-breakpoint-up(lg) {
         font-size: 40px;
-        line-height: 1.2;
         padding: 0;
         text-align: left;
       }

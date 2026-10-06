@@ -9,14 +9,32 @@ a {
     outline: none;
   }
 }
+
+#main {
+  a:not(.btn):not(.post-image):not(.slick-arrow):not(.btn-play) {
+    color: $link-color;
+
+    &:visited {
+      color: $link-visited-color;
+    }
+
+    &:hover {
+      background-color: $link-hover-bg;
+    }
+  }
+}
 p {
   &:last-child {
     margin-bottom: 0;
   }
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h4, h5, h6,
+.titlebar,
+.st-title,
+.post-title {
   font-family: $font-family-fsme-bold;
+  line-height: 1.4;
 }
 
 .form-control {
@@ -127,13 +145,10 @@ h1, h2, h3, h4, h6 {
 .st-title {
   font-family: $font-family-fsme-bold;
   font-size: 32px;
-  line-height: 1.2;
   @include media-breakpoint-up(md) {
     font-size: 41px;
-    line-height: 1.15;
   }
   @include media-breakpoint-up(lg) {
     font-size: 50px;
-    line-height: 1.1;
   }
 }

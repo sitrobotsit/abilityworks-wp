@@ -8,12 +8,10 @@
     font-weight: $font-weight-bold;
     color: $primary;
     font-size: 25px;
-    line-height: 1.12;
     margin: 0 0 15px;
     text-align: center;
     @include media-breakpoint-up(md) {
       font-size: 30px;
-      line-height: 35px;
       text-align: left;
       margin-bottom: 17px;
     }
@@ -53,9 +51,8 @@
     li {
       position: relative;
       z-index: 10;
-      &.active {
-        .show-slide {
-          color: $white;
+      &.active {        .show-slide {
+        color: $white;
           background-color: $soft-blue;
         }
       }
@@ -91,9 +88,8 @@
       }
     }
   }
-  .steps-carousel {
-    @include media-breakpoint-up(lg) {
-      max-width: 768px;
+  .steps-carousel {    @include media-breakpoint-up(lg) {
+    max-width: 768px;
       margin: 0 auto;
     }
     .item {
@@ -104,12 +100,10 @@
       .title {
         font-size: 20px;
         font-weight: $font-weight-bold;
-        line-height: 1.25;
         color: $primary;
         margin: 0 0 20px;
         @include media-breakpoint-up(md) {
           font-size: 25px;
-          line-height: 28px;
           margin-bottom: 24px;
         }
       }

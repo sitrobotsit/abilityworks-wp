@@ -1,10 +1,8 @@
-.st-caro-01 {
-  .slides-wrapper {
-    position: relative;
+.st-caro-01 {  .slides-wrapper {
+  position: relative;
   }
-  .slide {
-    .slide-inn {
-      background-repeat: no-repeat;
+  .slide {    .slide-inn {
+    background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       height: calc(100vh - 76px);
@@ -41,11 +39,9 @@
         h2 {
           font-family: $font-family-fsme-bold;
           font-size: 32px;
-          line-height: 35px;
           margin: 0 0 13px;
           @include media-breakpoint-up(lg) {
             font-size: 56px;
-            line-height: 64px;
             max-width: 680px;
             margin: 0 0 10px;
           }
@@ -62,9 +58,8 @@
             margin: 0 0 32px;
           }
         }
-        .btn-outline-dark {
-          &:hover {
-            background: transparent;
+        .btn-outline-dark {          &:hover {
+          background: transparent;
             border-color: $soft-blue !important;
             color: $soft-blue !important;
           }

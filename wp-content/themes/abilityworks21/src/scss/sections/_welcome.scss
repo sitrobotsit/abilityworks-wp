@@ -33,7 +33,6 @@
     .headline {
       font-weight: $font-weight-bold;
       font-size: 40px;
-      line-height: 1.125;
       margin-bottom: .5em;
       @include media-breakpoint-up(lg) {
         font-size: 55px;
@@ -89,9 +88,8 @@
         z-index: 0;
         transition: all .3s ease;
       }
-      &:hover {
-        &:after, a {
-          transform: scale(1.05);
+      &:hover {        &:after, a {
+        transform: scale(1.05);
         }
         .btn {
           background: $blue;
@@ -133,7 +131,6 @@
         z-index: 2;
         font-weight: $font-weight-bold;
         font-size: 40px;
-        line-height: 1.125;
         margin: 0 0 8px;
         @include media-breakpoint-up(lg) {
           margin-bottom: 12px;

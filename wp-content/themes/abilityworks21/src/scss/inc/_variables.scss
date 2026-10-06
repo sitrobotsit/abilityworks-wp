@@ -186,9 +186,11 @@ $body-color:                $gray-800 !default;
 //
 // Style anchor elements.
 
-$link-color:                              theme-color("primary") !default;
+$link-color:                              $gray-800 !default;
+$link-visited-color:                      #146de5 !default;
+$link-hover-bg:                           #d9f7ff !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        $link-color !default;
 $link-hover-decoration:                   underline !default;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15% !default;
@@ -321,7 +323,7 @@ $h6-font-size:                22px !default;
 $headings-margin-bottom:      .5rem !default;
 $headings-font-family:        null !default;
 $headings-font-weight:        400 !default;
-$headings-line-height:        1.8 !default;
+$headings-line-height:        1.4 !default;
 $headings-color:              null !default;
 
 $display1-size:               6rem !default;

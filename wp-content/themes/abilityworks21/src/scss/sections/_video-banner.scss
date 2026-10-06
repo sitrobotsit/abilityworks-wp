@@ -8,10 +8,8 @@
   @include media-breakpoint-up(lg) {
     height: 100vh;
   }
-  &.mob-bg-img {
-    @include media-breakpoint-down(md) {
-      video, .btn-play {
-        display: none;
+  &.mob-bg-img {    @include media-breakpoint-down(md) {      video, .btn-play {
+    display: none;
       }
     }
   }
@@ -54,11 +52,9 @@
     h1 {
       font-family: $font-family-fsme-bold;
       font-size: 32px;
-      line-height: 35px;
       margin: 0 0 13px;
       @include media-breakpoint-up(lg) {
         font-size: 56px;
-        line-height: 64px;
         max-width: 680px;
         margin: 0 0 10px;
       }
@@ -75,9 +71,8 @@
         margin: 0 0 32px;
       }
     }
-    .btn-outline-dark {
-      &:hover {
-        background: transparent;
+    .btn-outline-dark {      &:hover {
+      background: transparent;
         border-color: $soft-blue !important;
         color: $soft-blue !important;
       }

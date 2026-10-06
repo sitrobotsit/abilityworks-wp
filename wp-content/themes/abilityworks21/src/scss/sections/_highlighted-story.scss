@@ -3,9 +3,8 @@
   @include media-breakpoint-up(lg) {
     padding-bottom: 80px;
   }
-  .inn {
-    @include media-breakpoint-up(lg) {
-      display: flex;
+  .inn {    @include media-breakpoint-up(lg) {
+    display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0 20px;
@@ -33,12 +32,10 @@
     h3.post-title {
       font-size: 20px;
       font-weight: $font-weight-bold;
-      line-height: 1.25;
       margin: 0 0 15px;
       color: $primary;
       @include media-breakpoint-up(md) {
         font-size: 30px;
-        line-height: 1.167;
         margin-bottom: 18px;
       }
     }
@@ -97,9 +94,8 @@
       }
     }
   }
-  .heroimg {
-    @include media-breakpoint-up(lg) {
-      width: 57.094%;
+  .heroimg {    @include media-breakpoint-up(lg) {
+    width: 57.094%;
     }
     a {
       display: block;

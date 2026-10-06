@@ -1,27 +1,20 @@
-.st-caro-16 {
-  &[data-slides="2"] {
-    .slides-controls {
-      @include media-breakpoint-up(md) {
-        display: none;
+.st-caro-16 {  &[data-slides="2"] {    .slides-controls {      @include media-breakpoint-up(md) {
+  display: none;
       }
     }
   }
-  &[data-slides="3"] {
-    .slides-controls {
-      @include media-breakpoint-up(lg) {
-        display: none;
+  &[data-slides="3"] {    .slides-controls {      @include media-breakpoint-up(lg) {
+    display: none;
       }
     }
   }
   .st-title {
     text-align: center;
     font-size: 32px;
-    line-height: 1.1875;
     padding: 0 20px;
     margin: 0 0 20px;
     @include media-breakpoint-up(lg) {
       font-size: 40px;
-      line-height: 1.2;
       margin: 0 0 35px;
       padding: 0;
       text-align: left;
@@ -34,9 +27,8 @@
       width: auto;
     }
   }
-  .slides {
-    @include media-breakpoint-up(lg) {
-      margin-left: -17px;
+  .slides {    @include media-breakpoint-up(lg) {
+    margin-left: -17px;
       margin-right: -17px;
     }
     .slick-list {

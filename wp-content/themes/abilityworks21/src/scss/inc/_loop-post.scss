@@ -1,6 +1,5 @@
-.loop-post {
-  .post-image {
-    display: block;
+.loop-post {  .post-image {
+  display: block;
     height: 170px;
     border-radius: $border-radius;
     background-repeat: no-repeat;
@@ -37,11 +36,9 @@
   }
   .post-title {
     font-size: 18px;
-    line-height: 1.1667;
     margin: 0 0 10px;
     @include media-breakpoint-up(md) {
       font-size: 22px;
-      line-height: 1.1818;
       margin-bottom: 19px;
     }
   }

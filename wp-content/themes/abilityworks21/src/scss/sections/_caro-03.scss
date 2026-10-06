@@ -1,28 +1,22 @@
-.st-caro-03 {
-  .wrap {
-    @include media-breakpoint-up(lg) {
-      max-width: $container-lg;
+.st-caro-03 {  .wrap {    @include media-breakpoint-up(lg) {
+  max-width: $container-lg;
       margin: 0 auto;
     }
     @include media-breakpoint-up(xl) {
       max-width: $container-xl;
     }
   }
-  .slides {
-    .slide {
-      @include media-breakpoint-up(lg) {
-        position: relative;
+  .slides {    .slide {      @include media-breakpoint-up(lg) {
+    position: relative;
         display: flex;
         justify-content: flex-end;
       }
       .titlebar {
         font-size: 20px;
-        line-height: 1.15;
         margin: 0;
         padding: 25px 50px;
         @include media-breakpoint-up(md) {
           font-size: 30px;
-          line-height: 1.167;
           padding: 35px 15%;
         }
         @include media-breakpoint-up(lg) {
@@ -54,7 +48,6 @@
           background: $primary;
           color: $white;
           font-size: 30px;
-          line-height: 1.167;
           padding: 34px 27px;
           border-radius: $border-radius;
           margin: 0 0 17px;

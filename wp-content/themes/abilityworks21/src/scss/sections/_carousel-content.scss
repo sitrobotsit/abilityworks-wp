@@ -19,9 +19,8 @@
     }
     .slick-list {
       overflow: visible;
-      .slick-track {
-        .slick-slide {
-          outline: none;
+      .slick-track {        .slick-slide {
+        outline: none;
           @include media-breakpoint-up(md) {
             padding-right: 32px;
           }
@@ -42,9 +41,8 @@
     @include media-breakpoint-up(md) {
       width: auto;
     }
-    .items-carousel-dots {
-      .slick-dots {
-        list-style-type: none;
+    .items-carousel-dots {      .slick-dots {
+      list-style-type: none;
         margin: 0;
         padding: 0;
         display: flex;
@@ -54,9 +52,8 @@
         li {
           line-height: 10px;
           padding: 0 3px;
-          &.slick-active {
-            button {
-              background: $primary;
+          &.slick-active {            button {
+            background: $primary;
             }
           }
           &:only-child {
@@ -76,9 +73,8 @@
         }
       }
     }
-    .items-carousel-navs {
-      button {
-        border: 1px solid $primary;
+    .items-carousel-navs {      button {
+      border: 1px solid $primary;
         color: $primary;
         background: transparent;
         width: 36px;
@@ -130,7 +126,6 @@
     }
     h3.title {
       font-size: 18px;
-      line-height: 1.12;
       font-weight: $font-weight-bold;
       color: $primary;
       margin: 0 0 15px;
