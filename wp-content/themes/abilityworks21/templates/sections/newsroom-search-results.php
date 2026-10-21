@@ -3,27 +3,60 @@ $page_for_posts = get_option('page_for_posts');
 $page_for_posts_url = get_permalink($page_for_posts);
 
 $kw = isset($_GET['kw']) ? trim($_GET['kw']) : '';
-if ( empty($kw) ) return;
+$tag_ids = [];
+if ( ! empty($_GET['tagids']) ) {
+  $raw = is_array($_GET['tagids']) ? $_GET['tagids'] : explode(',', (string) $_GET['tagids']);
+  $tag_ids = array_values(array_filter(array_map('intval', $raw)));
+} elseif ( ! empty($_GET['tagid']) ) {
+  $tag_ids = [ (int) $_GET['tagid'] ];
+}
+
+if ( $kw === '' && empty($tag_ids) ) {
+  return;
+}
+
 $args = [
   'post_type' => 'post',
   'post_status' => 'publish',
-  'posts_per_page' => (int) get_sub_field('posts_per_page'),
-  's' => $kw,
-  'relevanssi' => true,
+  'posts_per_page' => $kw !== '' ? (int) get_sub_field('posts_per_page') : -1,
 ];
-$tagid = isset($_GET['tagid']) ? intval($_GET['tagid']) : '';
-if ( $tagid ) {
-  $args['tag_id'] = $tagid;
+
+if ( $kw !== '' ) {
+  $args['s'] = $kw;
+  $args['relevanssi'] = true;
 }
+
+if ( ! empty($tag_ids) ) {
+  $args['tag__in'] = $tag_ids;
+}
+
 $newsroomSearchQuery = new WP_Query( $args );
+
+$tag_names = [];
+if ( ! empty($tag_ids) ) {
+  foreach ( $tag_ids as $tag_id ) {
+    $term = get_tag( $tag_id );
+    if ( $term && ! is_wp_error($term) ) {
+      $tag_names[] = $term->name;
+    }
+  }
+}
 ?>
   <section <?php AW_Helpers::SectionAttrs('newsroom-search-results'); ?>>
     <div class="container">
       <div class="headline">
         <h2 class="st-title">
-          <?php echo sizeof($newsroomSearchQuery->posts);/*$newsroomSearchQuery->found_posts;*/ ?>
-          results for &ldquo;<?php echo $kw; ?>&rdquo;</h2>
-        <a href="<?php echo $page_for_posts_url; ?>" class="btn btn-outline-dark">CLEAR SEARCH</a>
+          <?php if ( $kw !== '' ) : ?>
+            <?php echo count($newsroomSearchQuery->posts); ?>
+            results for &ldquo;<?php echo esc_html($kw); ?>&rdquo;
+          <?php elseif ( ! empty($tag_names) ) : ?>
+            <?php echo count($newsroomSearchQuery->posts); ?>
+            related articles tagged &ldquo;<?php echo esc_html(implode(', ', $tag_names)); ?>&rdquo;
+          <?php else : ?>
+            <?php echo count($newsroomSearchQuery->posts); ?> related articles
+          <?php endif; ?>
+        </h2>
+        <a href="<?php echo esc_url($page_for_posts_url); ?>" class="btn btn-outline-dark">CLEAR SEARCH</a>
       </div>
 
       <?php if ( $newsroomSearchQuery->have_posts() ) : ?>
@@ -50,9 +83,9 @@ $newsroomSearchQuery = new WP_Query( $args );
       <?php endif; ?>
 
       <div class="footline">
-        <a href="<?php echo $page_for_posts_url; ?>" class="btn btn-outline-dark">CLEAR SEARCH</a>
+        <a href="<?php echo esc_url($page_for_posts_url); ?>" class="btn btn-outline-dark">CLEAR SEARCH</a>
       </div>
     </div>
   </section>
 <?php
-wp_reset_query();
+wp_reset_postdata();
