@@ -1,6 +1,6 @@
 <?php
 $slides = get_sub_field('slides');
-$totalSlides = sizeof($slides);
+$totalSlides = is_array($slides) ? count($slides) : 0;
 ?>
 <section <?php AW_Helpers::SectionAttrs('caro-03'); ?>>
   <div class="wrap">

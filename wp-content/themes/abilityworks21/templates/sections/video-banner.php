@@ -1,6 +1,9 @@
 <?php
 global $sectionCounter;
 $button = get_sub_field('button');
+if ( !is_array($button) ) {
+  $button = [];
+}
 $text_color = get_sub_field('text_color');
 $mob_use_image = get_sub_field('mob_use_image');
 ?>
@@ -21,7 +24,7 @@ $mob_use_image = get_sub_field('mob_use_image');
       <?php endif; ?>
       <?php if (!empty($button['title'])) : ?>
         <a href="<?php echo $button['url']; ?>"
-          target="<?php echo $button['target']!='0' ? $button['target'] : '_self'; ?>"
+          target="<?php echo !empty($button['target']) && $button['target']!='0' ? $button['target'] : '_self'; ?>"
           style="color: <?php echo $text_color; ?>;border-color: <?php echo $text_color; ?>;"
           class="btn btn-outline-dark"><?php echo $button['title']; ?></a>
       <?php endif; ?>

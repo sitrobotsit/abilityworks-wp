@@ -1,7 +1,8 @@
 <?php
 $slides = get_sub_field('slides');
+$slide_count = is_array($slides) ? count($slides) : 0;
 ?>
-<section <?php AW_Helpers::SectionAttrs('caro-16'); ?> data-slides="<?php echo sizeof($slides); ?>">
+<section <?php AW_Helpers::SectionAttrs('caro-16'); ?> data-slides="<?php echo $slide_count; ?>">
   <div class="container">
     <?php if ( $title = get_sub_field('title') ) : ?>
       <h2 class="st-title"><?php echo $title; ?></h2>

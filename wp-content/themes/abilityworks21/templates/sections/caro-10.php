@@ -1,11 +1,15 @@
 <?php
 $title = get_sub_field('title');
 $right_button = get_sub_field('right_button');
+if ( !is_array($right_button) ) {
+  $right_button = [];
+}
 $slides = get_sub_field('slides');
+$slide_count = is_array($slides) ? count($slides) : 0;
 ?>
-<section <?php AW_Helpers::SectionAttrs('caro-10'); ?> data-slides="<?php echo sizeof($slides); ?>">
+<section <?php AW_Helpers::SectionAttrs('caro-10'); ?> data-slides="<?php echo $slide_count; ?>">
   <div class="container">
-    <?php if ( $title || $right_button['title'] ) : ?>
+    <?php if ( $title || !empty($right_button['title']) ) : ?>
       <div class="headline">
         <?php if ( $title ) : ?>
           <h2><?php echo $title; ?></h2>
@@ -24,6 +28,9 @@ $slides = get_sub_field('slides');
             the_row();
             $icon = get_sub_field('icon');
             $button = get_sub_field('button');
+            if ( !is_array($button) ) {
+              $button = [];
+            }
             $bg_color = get_sub_field('bg_color');
         ?>
           <div class="slide" style="background-color: <?php echo $bg_color; ?>">
@@ -47,7 +54,7 @@ $slides = get_sub_field('slides');
             <?php endif; ?>
 
             <?php if ( !empty($button['title']) ) : ?>
-              <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']!='0' ? $button['target'] : '_self'; ?>"
+              <a href="<?php echo $button['url']; ?>" target="<?php echo !empty($button['target']) && $button['target']!='0' ? $button['target'] : '_self'; ?>"
                 class="btn btn-outline-dark"><?php echo $button['title']; ?></a>
             <?php endif; ?>
           </div>

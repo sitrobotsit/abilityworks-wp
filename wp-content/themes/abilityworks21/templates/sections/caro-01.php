@@ -8,6 +8,9 @@ $fitHeight = !get_sub_field('auto_height_image');
         while ( have_rows('slides') ) :
           the_row();
           $button = get_sub_field('button');
+          if ( !is_array($button) ) {
+            $button = [];
+          }
           $background_color = get_sub_field('background_color');
           $text_color = get_sub_field('color');
           $image = get_sub_field('image');

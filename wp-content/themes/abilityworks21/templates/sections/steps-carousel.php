@@ -1,6 +1,6 @@
 <?php
 $steps = get_sub_field('steps');
-$totalSteps = sizeof($steps);
+$totalSteps = is_array($steps) ? count($steps) : 0;
 $initInfoText = '';
 $counter = 0;
 ?>

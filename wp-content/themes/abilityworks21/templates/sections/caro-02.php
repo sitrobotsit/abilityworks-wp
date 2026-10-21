@@ -30,6 +30,9 @@ $bg_color_desc = get_sub_field('bg_color_desc');
             the_row();
             $icon = get_sub_field('icon');
             $button = get_sub_field('button');
+            if ( !is_array($button) ) {
+              $button = [];
+            }
             $bg_color = get_sub_field('bg_color');
         ?>
           <div class="slide">
@@ -43,7 +46,7 @@ $bg_color_desc = get_sub_field('bg_color_desc');
               <?php endif; ?>
 
               <?php if ( !empty($button['title']) ) : ?>
-                <a href="<?php echo $button['url']; ?>" target="<?php echo $button['target']!='0' ? $button['target'] : '_self'; ?>"
+                <a href="<?php echo $button['url']; ?>" target="<?php echo !empty($button['target']) && $button['target']!='0' ? $button['target'] : '_self'; ?>"
                   class="btn btn-outline-dark"><?php echo $button['title']; ?></a>
               <?php else: ?>
                 <span></span>
